@@ -278,6 +278,79 @@
     </div>
   </div>
 
+  <div class="experience-card">
+    <div class="exp-row">
+      <div class="exp-item"><b>Company</b><span>Ubisoft Entertainment</span></div>
+      <div class="exp-item"><b>Designation</b><span>Concept Artist</span></div>
+      <div class="exp-item"><b>Location</b><span>Abu Dhabi, United Arab Emirates</span></div>
+      <div class="exp-item"><b>Duration</b><span>August 2014 — August 2019</span></div>
+    </div>
+     <div class="exp-item">
+      <b>Description</b>
+      <p>
+        Contributed to the creation of 2D props concepts, 3D props, texturing, Environment concepts and Visual Development for Unity based game. 
+        Maps, background art, 3D blocking and mini games art for hidden Object games.
+      </p>
+    </div>
+
+    <div class="exp-item">
+      <b>Notable Projects</b>
+      <div class="exp-tags">
+        <span class="tag-pill">Clash of Beasts</span>
+        <span class="tag-pill">NCIS: Hidden Crimess</span>
+        <span class="tag-pill">Tom Clancy's Elite Squad</span>
+        <span class="tag-pill">CSI: Hidden Crimes</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="experience-card">
+    <div class="exp-row">
+      <div class="exp-item"><b>Company</b><span>Playdom: Disney Interactive Media Group</span></div>
+      <div class="exp-item"><b>Designation</b><span>Background Artist</span></div>
+      <div class="exp-item"><b>Location</b><span>Hyderabad, India</span></div>
+      <div class="exp-item"><b>Duration</b><span>May 2012 — April 2014</span></div>
+    </div>
+     <div class="exp-item">
+      <b>Description</b>
+      <p>
+        Initial concept development, background painting,3D props design,Background animation and texture painting for 3D assets.
+      </p>
+    </div>
+   
+    <div class="exp-item">
+      <b>Notable Projects</b>
+      <div class="exp-tags">
+        <span class="tag-pill">Blackwood & Bells mysteries</span>
+        <span class="tag-pill">Disney's Animal Kingdom</span>
+        <span class="tag-pill">Disney's City Girl</span>
+      </div>
+    </div>
+  </div>
+
+    <div class="experience-card">
+    <div class="exp-row">
+      <div class="exp-item"><b>Company</b><span>Gameshastra Solution Pvt Ltd</span></div>
+      <div class="exp-item"><b>Designation</b><span>Background Artist</span></div>
+      <div class="exp-item"><b>Location</b><span>Hyderabad, India</span></div>
+      <div class="exp-item"><b>Duration</b><span>November 2011 — April 2012</span></div>
+    </div>
+     <div class="exp-item">
+      <b>Description</b>
+      <p>
+        Initial concept development, background painting,3D props design,Background animation and texture painting for 3D assets.
+      </p>
+    </div>
+   
+    <div class="exp-item">
+      <b>Notable Projects</b>
+      <div class="exp-tags">
+        <span class="tag-pill">Zynga's Hidden Chronicles</span>
+        <span class="tag-pill">PLaydom's Gardens of Time</span>
+      </div>
+    </div>
+  </div>
+
   <div class="section-label" style="margin-top:3rem;">Software Proficiency</div>
   <div class="skills-grid">
     <div class="skill-badge"><div class="mono">Ps</div><span>Adobe Photoshop</span></div>
@@ -659,9 +732,7 @@ function renderProjectGrid(){
       const tagLabel = project.category === 'personal' ? 'Personal' : project.category === 'album' ? 'Album Art' : 'Studio';
       card.innerHTML = `
         <div class="project-thumb">
-          <div class="tag">${tagLabel}</div>
           <img src="${thumbSrc}" alt="${project.title}">
-          ${project.images.length > 1 ? `<div class="count">${project.images.length} pieces</div>` : ''}
           <div class="thumb-overlay">
             <div class="title">${project.title}</div>
             <div class="meta">${project.meta}</div>
