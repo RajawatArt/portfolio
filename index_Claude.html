@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Surendra Rajawat —Environment Concept Artist :: illustrator</title>
+<meta name="description" content="Portfolio of Surendra Rajawat — Concept Artist, Rajawats Studio LLC.">
+<link rel="icon" type="image/jpeg" href="images/favicon.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600&family=Google+Sans:wght@400;500;700&family=Orbitron:wght@500;700&family=Work+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  
+  :root{
+    --bg: #1C1C1E; --bg-raised: #242426; --bg-raised-2:#2A2A2D;
+    --ink: #E8E8EA; --ink-dim: #98989C; --line: #3A3A3D;
+    --accent: #1B98C4; --accent-dim: #14708F;
+  }
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{ background:var(--bg); color:var(--ink); font-family:'Work Sans', sans-serif; font-weight:300; line-height:1.6; }
+  @media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } *{ animation-duration:.01ms !important; transition-duration:.01ms !important; } }
+  a{ color:inherit; text-decoration:none; }
+  ::selection{ background:var(--accent); color:var(--bg); }
+  img{ display:block; max-width:100%; }
+
+  /* Nav */
+  .nav{ position:sticky; top:0; display:flex; justify-content:space-between; align-items:center; padding:1rem 4vw; z-index:100; background:rgba(18,17,16,.92); backdrop-filter:blur(8px); border-bottom:1px solid var(--line); flex-wrap:wrap; gap:1rem; }
+  .nav-mark{ display:flex; align-items:center; }
+  .nav-mark img{ height:38px; width:auto; }
+  .nav-links{ display:flex; gap:1.75rem; list-style:none; flex-wrap:wrap; }
+  .nav-links button{ background:none; border:none; cursor:pointer; font-family:'Work Sans',sans-serif; color:var(--ink); font-size:.72rem; letter-spacing:.13em; text-transform:uppercase; padding:0; position:relative; padding-bottom:4px; }
+  .nav-links button::after{ content:''; position:absolute; left:0; bottom:0; width:0; height:1px; background:var(--accent); transition:width .3s ease; }
+  .nav-links button:hover::after, .nav-links button.active::after{ width:100%; }
+  .nav-links button.active{ color:var(--accent); }
+
+  /* Header */
+  .header{ padding:4rem 4vw 3rem; border-bottom:1px solid var(--line); }
+  .header h1{ font-family:'Google Sans', 'Work Sans', sans-serif; font-weight:700; font-size:clamp(1.2rem, 3vw, 2rem); letter-spacing:-.01em; }
+  .header .subtitle{ margin-top:.6rem; font-family:'JetBrains Mono', monospace; font-size:.8rem; letter-spacing:.16em; text-transform:uppercase; color:var(--accent); }
+
+  .tab-panel{ display:none; padding:3.5rem 4vw 5rem; }
+  .tab-panel.active{ display:block; }
+
+  .section-label{ font-family:'JetBrains Mono', monospace; font-size:.7rem; letter-spacing:.2em; text-transform:uppercase; color:var(--accent); margin-bottom:.75rem; }
+  .section-label::before{ content:'— '; color:var(--accent-dim); }
+  .section-title{ font-family:'Fraunces', serif; font-weight:500; font-size:1.8rem; margin-bottom:2.5rem; }
+
+  /* Work: filter bar */
+  .filter-bar{ display:flex; gap:1.75rem; margin-bottom:2.5rem; border-bottom:1px solid var(--line); padding-bottom:1.5rem; flex-wrap:wrap; }
+  .filter-btn{ background:none; border:none; cursor:pointer; font-family:'JetBrains Mono', monospace; color:var(--ink-dim); font-size:.72rem; letter-spacing:.12em; text-transform:uppercase; padding:0 0 4px; border-bottom:1px solid transparent; }
+  .filter-btn:hover{ color:var(--ink); }
+  .filter-btn.active{ color:var(--accent); border-color:var(--accent); }
+
+  /* Work grid */
+  .grid{ display:grid; grid-template-columns:repeat(auto-fill, minmax(288px, 1fr)); gap:0; }
+  .project-card{ cursor:pointer; }
+  .project-thumb{ position:relative; aspect-ratio:1/1; background:var(--bg-raised); overflow:hidden; border:1px solid var(--line); }
+  .project-thumb img{ width:100%; height:100%; object-fit:cover; transition:transform .5s ease; }
+  .project-card:hover .project-thumb img{ transform:scale(1.06); }
+  .project-thumb .count{ position:absolute; top:.6rem; right:.6rem; font-family:'JetBrains Mono', monospace; font-size:.62rem; background:rgba(28,28,30,.78); border:1px solid var(--line); padding:.25rem .5rem; color:var(--ink-dim); }
+  .project-thumb .tag{ position:absolute; top:.6rem; left:.6rem; font-family:'JetBrains Mono', monospace; font-size:.6rem; letter-spacing:.06em; text-transform:uppercase; background:rgba(28,28,30,.78); border:1px solid var(--accent-dim); color:var(--accent); padding:.25rem .5rem; }
+  .thumb-overlay{ position:absolute; left:0; right:0; bottom:0; background:linear-gradient(to top, var(--bg) 0%, rgba(0,0,0,0) 100%); padding:2.5rem .9rem .9rem; opacity:0; transform:translateY(6px); transition:opacity .3s ease, transform .3s ease; }
+  .project-card:hover .thumb-overlay{ opacity:1; transform:translateY(0); }
+  .thumb-overlay .title{ font-family:'Fraunces', serif; font-size:1.05rem; color:var(--ink); }
+  .thumb-overlay .meta{ font-family:'JetBrains Mono', monospace; font-size:.65rem; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-dim); margin-top:.3rem; }
+
+  /* Project detail (inline, replaces grid — no popup) */
+  .project-detail{ display:none; }
+  .project-detail.active{ display:block; }
+  .back-link{ display:inline-flex; align-items:center; gap:.5rem; font-family:'JetBrains Mono', monospace; font-size:.7rem; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-dim); margin-bottom:2rem; cursor:pointer; background:none; border:none; }
+  .back-link:hover{ color:var(--accent); }
+  .detail-head{ border-bottom:1px solid var(--line); padding-bottom:1.5rem; margin-bottom:2rem; }
+  .detail-head .title{ font-family:'Fraunces', serif; font-size:1.7rem; }
+  .detail-head .meta{ font-family:'JetBrains Mono', monospace; font-size:.72rem; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-dim); margin-top:.5rem; }
+
+  .artwork-stack{ display:flex; flex-direction:column; gap:2px; background:var(--line); }
+  .artwork-thumb{ cursor:zoom-in; background:var(--bg-raised-2); }
+  .artwork-thumb .frame{ position:relative; background:var(--bg-raised); overflow:hidden; }
+  .artwork-thumb img{ width:100%; height:auto; display:block; transition:transform .45s ease; }
+  .artwork-thumb:hover img{ transform:scale(1.02); }
+  .artwork-thumb .cap{ padding:.9rem 1.1rem; font-family:'JetBrains Mono', monospace; font-size:.72rem; color:var(--ink-dim); letter-spacing:.03em; }
+
+  /* Album Art: masonry-style tile layout, natural aspect ratios */
+  .artwork-tiles{ column-count:5; column-gap:8px; }
+  .artwork-tiles .artwork-thumb{ cursor:zoom-in; break-inside:avoid; margin-bottom:8px; background:none; }
+  .artwork-tiles .artwork-thumb .frame{ position:relative; background:var(--bg-raised); overflow:hidden; }
+  .artwork-tiles .artwork-thumb img{ width:100%; height:auto; display:block; object-fit:unset; transition:transform .4s ease; }
+  .artwork-tiles .artwork-thumb:hover img{ transform:scale(1.03); }
+  @media (max-width:1100px){ .artwork-tiles{ column-count:4; } }
+  @media (max-width:820px){ .artwork-tiles{ column-count:3; } }
+  @media (max-width:560px){ .artwork-tiles{ column-count:2; } }
+
+  /* Project detail: video slot + footer nav */
+  #detailVideo:not(:empty){ margin-bottom:2rem; }
+  .detail-foot{ display:flex; justify-content:flex-end; margin-top:3rem; padding-top:2rem; border-top:1px solid var(--line); }
+  .next-project-btn{ font-family:'JetBrains Mono', monospace; font-size:.72rem; letter-spacing:.12em; text-transform:uppercase; background:transparent; border:1px solid var(--accent); color:var(--accent); padding:.85rem 1.5rem; cursor:pointer; transition:background .3s ease, color .3s ease; }
+  .next-project-btn:hover{ background:var(--accent); color:var(--bg); }
+
+  /* Back to top */
+  .back-to-top{ position:fixed; bottom:2rem; right:2rem; width:46px; height:46px; border-radius:50%; background:var(--bg-raised); border:1px solid var(--accent-dim); color:var(--accent); font-size:1.1rem; display:flex; align-items:center; justify-content:center; cursor:pointer; opacity:0; visibility:hidden; transform:translateY(10px); transition:opacity .3s ease, transform .3s ease, visibility .3s ease; z-index:200; }
+  .back-to-top.show{ opacity:1; visibility:visible; transform:translateY(0); }
+  .back-to-top:hover{ background:var(--accent); color:var(--bg); }
+
+  /* Lightbox */
+  .lightbox{ position:fixed; inset:0; z-index:1100; background:rgba(6,6,5,.98); display:none; align-items:center; justify-content:center; padding:4vh 4vw; }
+  .lightbox.open{ display:flex; }
+  .lightbox-inner{ position:relative; max-width:1100px; width:100%; }
+  .lightbox img{ max-width:100%; max-height:80vh; object-fit:contain; margin:0 auto; box-shadow:0 20px 60px rgba(0,0,0,.5); }
+  .lightbox-caption{ text-align:center; margin-top:1rem; font-family:'JetBrains Mono', monospace; font-size:.72rem; color:var(--ink-dim); letter-spacing:.04em; }
+  .lightbox-close{ position:absolute; top:-2.5rem; right:0; font-family:'JetBrains Mono', monospace; font-size:.8rem; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-dim); cursor:pointer; }
+  .lightbox-close:hover{ color:var(--accent); }
+  .lightbox-nav{ position:absolute; top:50%; transform:translateY(-50%); font-family:'JetBrains Mono', monospace; font-size:1.4rem; color:var(--ink-dim); cursor:pointer; background:rgba(18,17,16,.6); border:1px solid var(--line); width:44px; height:44px; display:flex; align-items:center; justify-content:center; }
+  .lightbox-nav:hover{ color:var(--accent); border-color:var(--accent); }
+  .lightbox-prev{ left:-1rem; } .lightbox-next{ right:-1rem; }
+  .lightbox-nav[hidden]{ display:none; }
+
+  /* Cinematics */
+  .video-list{ display:flex; flex-direction:column; gap:3rem; }
+  .video-card{ display:grid; grid-template-columns:1.4fr 1fr; gap:2rem; align-items:start; border-bottom:1px solid var(--line); padding-bottom:3rem; }
+  .video-frame{ position:relative; aspect-ratio:16/9; background:var(--bg-raised); overflow:hidden; border:1px solid var(--line); }
+  .video-frame iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; }
+  .video-text .v-title{ font-family:'Fraunces', serif; font-size:1.2rem; margin-bottom:.6rem; }
+  .video-text .v-desc{ color:var(--ink-dim); font-size:.92rem; margin-bottom:1rem; }
+  .video-text .v-credit{ font-family:'JetBrains Mono', monospace; font-size:.68rem; color:var(--ink-dim); letter-spacing:.04em; line-height:1.9; }
+  .video-text .v-credit b{ color:var(--ink); font-weight:500; }
+
+  /* Videography grid */
+  .video-grid{ display:grid; grid-template-columns:repeat(auto-fill, minmax(320px, 1fr)); gap:1.5rem; }
+  .video-grid .video-frame{ margin-bottom:.6rem; }
+  .video-grid .v-title{ font-family:'JetBrains Mono', monospace; font-size:.72rem; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-dim); }
+
+  /* About */
+  .about-body p{ max-width:64ch; color:var(--ink-dim); margin-bottom:1.25rem; font-size:1.05rem; }
+  .about-body strong{ color:var(--ink); font-weight:500; }
+  .resume-btn{ display:inline-flex; align-items:center; gap:.5rem; font-family:'JetBrains Mono', monospace; font-size:.72rem; letter-spacing:.12em; text-transform:uppercase; background:transparent; border:1px solid var(--accent); color:var(--accent); padding:.85rem 1.5rem; cursor:pointer; transition:background .3s ease, color .3s ease; margin-top:.5rem; }
+  .resume-btn:hover{ background:var(--accent); color:var(--bg); }
+
+  .experience-card{ border:1px solid var(--line); background:var(--bg-raised); padding:2rem; margin-top:1rem; }
+  .exp-row{ display:flex; flex-wrap:wrap; gap:.5rem 1.5rem; margin-bottom:1.25rem; }
+  .exp-item b{ display:block; font-family:'JetBrains Mono', monospace; font-size:.62rem; letter-spacing:.12em; text-transform:uppercase; color:var(--accent-dim); margin-bottom:.3rem; }
+  .exp-item span{ font-family:'Fraunces', serif; font-size:1.05rem; }
+  .exp-item-sm span{ font-size:.78rem; }
+  .exp-tags{ display:flex; flex-wrap:wrap; gap:.5rem; margin-top:.5rem; }
+  .tag-pill{ font-family:'JetBrains Mono', monospace; font-size:.66rem; letter-spacing:.04em; border:1px solid var(--line); color:var(--ink-dim); padding:.35rem .7rem; }
+
+  .skills-grid{ display:flex; flex-wrap:wrap; gap:1rem; margin-top:1rem; }
+  .skill-badge{ display:flex; align-items:center; gap:.75rem; border:1px solid var(--line); background:var(--bg-raised); padding:.75rem 1.1rem; }
+  .skill-badge img{ width:26px; height:26px; object-fit:contain; flex-shrink:0; }
+
+  .skill-badge span{ font-family:'JetBrains Mono', monospace;  font-size:.78rem;  letter-spacing:.03em; }
+  .skills-note{ margin-top:1.25rem; font-size:.82rem; color:var(--ink-dim); max-width:60ch; }
+
+
+.about-layout{display:grid;grid-template-columns:1fr 320px;gap:4rem;align-items:start;}
+.about-photo img{width:100%;border:1px solid var(--line);border-radius:10px;}
+.project-link{cursor:pointer}
+.project-link .ext{margin-left:.3rem;color:var(--accent);}
+  .project-video{
+    position:relative;
+    display:inline-flex;
+    align-items:center;
+    gap:.55rem;
+
+    padding:.45rem .85rem;
+    border-radius:999px;
+
+    border:1px solid rgba(27,152,196,.55);
+    background:rgba(27,152,196,.14);
+
+    color:#F5F5F5 !important;
+    font-weight:500;
+
+    cursor:pointer;
+    transition:all .25s ease;
+}
+
+.project-video:hover{
+    background:var(--accent);
+    border-color:var(--accent);
+    color:var(--bg) !important;
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px rgba(27,152,196,.25);
+}
+
+.project-video .play{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    width:18px;
+    height:18px;
+
+    border-radius:50%;
+    background:var(--accent);
+    color:white;
+
+    font-size:10px;
+    line-height:1;
+    flex-shrink:0;
+}
+
+.project-video:hover .play{
+    background:#fff;
+    color:var(--accent);
+}
+
+.project-video::after{
+    content:"Play Cinematic";
+    position:absolute;
+
+    left:50%;
+    bottom:calc(100% + 10px);
+
+    transform:translateX(-50%) translateY(6px);
+
+    background:#111;
+    color:#fff;
+
+    border:1px solid var(--line);
+    border-radius:6px;
+
+    padding:6px 10px;
+
+    font-size:.62rem;
+    font-family:'JetBrains Mono', monospace;
+
+    opacity:0;
+    pointer-events:none;
+    white-space:nowrap;
+
+    transition:.2s;
+}
+
+.project-video:hover::after{
+    opacity:1;
+    transform:translateX(-50%) translateY(0);
+}
+
+.video-info{
+    margin-top:10px;
+}
+
+.video-info h2{
+    margin-bottom:10px;
+}
+
+.video-role{
+    color:var(--accent);
+    font-weight:600;
+    margin-bottom:18px;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    font-size:.8rem;
+}
+
+.video-info p{
+    color:var(--ink-dim);
+    line-height:1.8;
+    margin-bottom:28px;
+}
+
+.video-credit{
+    display:flex;
+    gap:12px;
+    margin-bottom:10px;
+}
+
+.video-credit strong{
+    width:120px;
+    color:var(--accent);
+}
+
+.video-credit span{
+    color:var(--ink);
+}
+  
+@media(max-width:900px){.about-layout{grid-template-columns:1fr;}.about-photo{max-width:320px;}}
+
+  /* Contact */
+  .contact-mail{ font-family:'Fraunces', serif; font-size:clamp(.8rem, 2vw, 1.375rem); font-weight:500; display:inline-block; position:relative; width:fit-content; }
+  .contact-mail::after{ content:''; position:absolute; left:0; bottom:-6px; width:100%; height:1px; background:var(--ink-dim); }
+  .contact-mail:hover{ color:var(--accent); } .contact-mail:hover::after{ background:var(--accent); }
+  .socials{ display:flex; gap:2rem; margin-top:1.75rem; flex-wrap:wrap; }
+  .socials a{ font-family:'JetBrains Mono', monospace; font-size:.72rem; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-dim); border-bottom:1px solid transparent; }
+  .socials a:hover{ color:var(--ink); border-color:var(--accent); }
+
+  .contact-form{ max-width:560px; margin-top:2.5rem; }
+  .field{ margin-bottom:1.5rem; }
+  .field label{ display:block; font-family:'JetBrains Mono', monospace; font-size:.68rem; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-dim); margin-bottom:.6rem; }
+  .field input, .field textarea{ width:100%; background:var(--bg-raised); border:1px solid var(--line); color:var(--ink); font-family:'Work Sans', sans-serif; font-size:.95rem; padding:.85rem 1rem; resize:vertical; }
+  .field input:focus, .field textarea:focus{ outline:none; border-color:var(--accent); }
+  .submit-btn{ font-family:'JetBrains Mono', monospace; font-size:.72rem; letter-spacing:.12em; text-transform:uppercase; background:transparent; border:1px solid var(--accent); color:var(--accent); padding:.9rem 1.75rem; cursor:pointer; transition:background .3s ease, color .3s ease; }
+  .submit-btn:hover{ background:var(--accent); color:var(--bg); }
+  .form-note{ font-size:.8rem; color:var(--ink-dim); max-width:50ch; margin-top:1rem; }
+
+  footer{ padding:2.5rem 4vw; display:flex; justify-content:space-between; flex-wrap:wrap; gap:1rem; font-family:'JetBrains Mono', monospace; font-size:.65rem; color:var(--ink-dim); border-top:1px solid var(--line); }
+
+  @media (max-width:900px){
+    .video-card{ grid-template-columns:1fr; }
+  }
+  @media (max-width:760px){
+    .nav{ padding:1rem 6vw; }
+    .nav-links{ gap:1rem; }
+    .header{ padding:3rem 6vw 2rem; }
+    .tab-panel{ padding:2.5rem 6vw 4rem; }
+    .lightbox-prev{ left:0; } .lightbox-next{ right:0; }
+  }
+  a:focus-visible, button:focus-visible{ outline:2px solid var(--accent); outline-offset:3px; }
+  body.no-scroll{ overflow:hidden; }
+
+  
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <a class="nav-mark" href="#" data-tab="work"><img src="images/logo.jpg" alt="Rajawats Studio"></a>
+  <ul class="nav-links">
+    <li><button data-tab="work" class="active">Work</button></li>
+    <li><button data-tab="cinematics">Cinematics</button></li>
+    <li><button data-tab="videography">Videography</button></li>
+    <li><button data-tab="about">About</button></li>
+    <li><button data-tab="contact">Contact</button></li>
+    <li><button data-tab="photography">Photography</button></li>
+  </ul>
+</nav>
+
+<div class="header">
+  <h1>Surendra Rajawat</h1>
+  <div class="subtitle">Senior Concept Artist:: illustrator</div>
+</div>
+
+<!-- ============ WORK ============ -->
+<div class="tab-panel active" id="panel-work">
+
+  <div id="workGridView">
+    <div class="filter-bar" id="filterBar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="studio">Studio Work</button>
+      <button class="filter-btn" data-filter="personal">Personal Work</button>
+      <button class="filter-btn" data-filter="album">Album Art</button>
+    </div>
+    <div class="grid" id="projectGrid"></div>
+  </div>
+
+  <div class="project-detail" id="projectDetail">
+    <button class="back-link" id="backToWork">← Back to Work</button>
+    <div class="detail-head">
+      <div class="title" id="detailTitle"></div>
+      <div class="meta" id="detailMeta"></div>
+    </div>
+    <div id="detailVideo"></div>
+    <div class="artwork-stack" id="artworkGrid"></div>
+    <div class="detail-foot">
+      <button class="next-project-btn" id="nextProjectBtn">Next Project →</button>
+    </div>
+  </div>
+
+</div>
+
+<!-- ============ CINEMATICS ============ -->
+<div class="tab-panel" id="panel-cinematics">
+  <div class="section-label">Selected Cinematics</div>
+  <div class="video-list" id="cinematicsList"></div>
+</div>
+
+<!-- ============ VIDEOGRAPHY ============ -->
+<div class="tab-panel" id="panel-videography">
+  <div class="section-label">Travel Videography</div>
+  <p style="color:var(--ink-dim); max-width:60ch; margin-bottom:2.5rem;">A collection of travel clips from places visited.</p>
+  <div class="video-grid" id="videographyGrid"></div>
+</div>
+
+<!-- ============ ABOUT ============ -->
+<div class="tab-panel" id="panel-about">
+  <div class="about-layout"><div class="about-body">
+    <p><strong>About me.</strong> Environment Concept Artist with over 10 years of experience creating visually compelling environments for video games and animation productions.</p>
+    <p>Skilled in Environment Concept Art,Visual Development, hand-Painted testures, Lighting, 2D/3D Props design.</p>
+    <p>Please use below email ID for work and business inquiry: s.rajawat@live.com</p>
+  </div><div class="about-photo"><img src="images/profile.jpg" alt="Surendra Rajawat"></div></div>
+
+  <a class="resume-btn" href="images/resume.pdf" download target="_blank" rel="noopener">Download Resume ↓</a>
+
+    <div class="section-label" style="margin-top:3rem;">Software Proficiency</div>
+  <div class="skills-grid">
+    <div class="skill-badge">
+    <img src="images/software/PS.svg" alt="Adobe Photoshop">
+    <span>Adobe Photoshop</span>
+</div>
+
+<div class="skill-badge"><img src="images/software/procreate.svg" alt="Procreate"><span>Procreate</span></div>
+<div class="skill-badge"><img src="images/software/3dsmax.svg" alt="3ds Max"><span>3ds Max</span></div>
+<div class="skill-badge"><img src="images/software/Blender.svg" alt="Blender"><span>Blender 3D</span></div>
+<div class="skill-badge"><img src="images/software/Corona.svg" alt="Corona Renderer"><span>Corona Renderer</span></div>
+<div class="skill-badge"><img src="images/software/Unity.svg" alt="Unity"><span>Unity 3D</span></div>
+<div class="skill-badge"><img src="images/software/AE.svg" alt="After Effects"><span>After Effects</span></div>
+  </div>
+  <div class="section-label" style="margin-top:2rem;">Experience</div>
+  <div class="experience-card">
+    <div class="exp-row">
+      <div class="exp-item"><b>Company</b><span>Rajawats Studio LLC</span></div>
+      <div class="exp-item exp-item-sm"><b>Designation</b><span>Environment Concept Artist</span></div>
+      <div class="exp-item exp-item-sm"><b>Location</b><span>Dubai, United Arab Emirates</span></div>
+      <div class="exp-item exp-item-sm"><b>Duration</b><span>Oct 2019 — Present</span></div>
+    </div>
+    <div class="exp-item" style="margin-bottom:1rem;">
+      <b>Clients &amp; Studios</b>
+      <div class="exp-tags">
+        <span class="tag-pill">Airbnb</span>
+        <span class="tag-pill">Digital Domain</span>
+        <span class="tag-pill">Axis Studios</span>
+        <span class="tag-pill">The Line Animation</span>
+        <span class="tag-pill">Passion Animation Studio</span>
+        <span class="tag-pill">Sun Creature</span>
+        <span class="tag-pill">WIZZ</span>
+        <span class="tag-pill">Savage Software Group</span>
+        <span class="tag-pill">Celsys</span>
+      </div>
+    </div>
+    <div class="exp-item">
+      <b>Notable Projects</b>
+      <div class="exp-tags">
+        <a class="tag-pill project-video" data-video="wagamama"><span class="play">▶</span>Wagamama</a>
+        <a class="tag-pill project-video" data-video="phoenixmancers"><span class="play">▶</span>League of Legends</a>        
+        <a class="tag-pill project-video" data-video="booyah"><span class="play">▶</span>FreeFire:Booyah Day</a>
+        <span class="tag-pill">Palia</span>
+        <a class="tag-pill project-video" data-video="absolution"><span class="play">▶</span>League of Legends:Absolution</a>
+
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="experience-card">
+    <div class="exp-row">
+      <div class="exp-item"><b>Company</b><span>Ubisoft Entertainment</span></div>
+      <div class="exp-item"><b>Designation</b><span>Concept Artist</span></div>
+      <div class="exp-item"><b>Location</b><span>Abu Dhabi, United Arab Emirates</span></div>
+      <div class="exp-item"><b>Duration</b><span>August 2014 — August 2019</span></div>
+    </div>
+     <div class="exp-item">
+      <b>Description</b>
+      <p>
+        Contributed to the creation of 2D props concepts, 3D props, texturing, Environment concepts and Visual Development for Unity based game. 
+        Maps, background art, 3D blocking and mini games art for hidden Object games.
+      </p>
+    </div>
+
+    <div class="exp-item">
+      <b>Notable Projects</b>
+      <div class="exp-tags">
+        <span class="tag-pill">Clash of Beasts</span>
+        <span class="tag-pill">NCIS: Hidden Crimess</span>
+        <span class="tag-pill">Tom Clancy's Elite Squad</span>
+        <span class="tag-pill">CSI: Hidden Crimes</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="experience-card">
+    <div class="exp-row">
+      <div class="exp-item"><b>Company</b><span>Playdom: Disney Interactive Media Group</span></div>
+      <div class="exp-item"><b>Designation</b><span>Background Artist</span></div>
+      <div class="exp-item"><b>Location</b><span>Hyderabad, India</span></div>
+      <div class="exp-item"><b>Duration</b><span>May 2012 — April 2014</span></div>
+    </div>
+     <div class="exp-item">
+      <b>Description</b>
+      <p>
+        Initial concept development, background painting,3D props design,Background animation and texture painting for 3D assets.
+      </p>
+    </div>
+   
+    <div class="exp-item">
+      <b>Notable Projects</b>
+      <div class="exp-tags">
+        <span class="tag-pill">Blackwood & Bells mysteries</span>
+        <span class="tag-pill">Disney's Animal Kingdom</span>
+        <span class="tag-pill">Disney's City Girl</span>
+      </div>
+    </div>
+  </div>
+
+    <div class="experience-card">
+    <div class="exp-row">
+      <div class="exp-item"><b>Company</b><span>Gameshastra Solution Pvt Ltd</span></div>
+      <div class="exp-item"><b>Designation</b><span>Background Artist</span></div>
+      <div class="exp-item"><b>Location</b><span>Hyderabad, India</span></div>
+      <div class="exp-item"><b>Duration</b><span>November 2011 — April 2012</span></div>
+    </div>
+     <div class="exp-item">
+      <b>Description</b>
+      <p>
+        Initial concept development, background painting,3D props design,Background animation and texture painting for 3D assets.
+      </p>
+    </div>
+   
+    <div class="exp-item">
+      <b>Notable Projects</b>
+      <div class="exp-tags">
+        <span class="tag-pill">Zynga's Hidden Chronicles</span>
+        <span class="tag-pill">PLaydom's Gardens of Time</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ CONTACT ============ -->
+<div class="tab-panel" id="panel-contact">
+  <p style="color:var(--ink-dim); max-width:60ch; margin-bottom:1.5rem;">Please use email ID for work and business inquiry:</p>
+  <a class="resume-btn" href="mailto:s.rajawat@live.com">Email me ↗</a>
+  <div class="socials">
+    <a href="https://www.artstation.com/rajawat" target="_blank" rel="noopener">ArtStation</a>
+    <a href="https://www.instagram.com/suren.rajawat" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://twitter.com/SpsRajawat" target="_blank" rel="noopener">Twitter</a>
+    <a href="https://www.linkedin.com/in/surendrarajawat" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</div>
+
+<!-- ============ PHOTOGRAPHY ============ -->
+<div class="tab-panel" id="panel-photography">
+  <div class="section-label">Photography</div>
+  <p style="color:var(--ink-dim); max-width:60ch;">Please visit my photography account: <a href="https://500px.com/p/rajawat" target="_blank" rel="noopener" style="color:var(--accent); border-bottom:1px solid var(--accent-dim);">500px</a></p>
+</div>
+
+<footer>
+  <span>© <span id="year"></span> Surendra Rajawat</span>
+  <span>Rajawats Studio LLC</span>
+</footer>
+
+  <!-- VIDEO LIGHTBOX -->
+<div class="lightbox" id="videoLightbox">
+
+    <div class="lightbox-inner" style="max-width:1100px;">
+
+        <div class="lightbox-close" id="videoClose">
+            Close ✕
+        </div>
+
+        <div style="position:relative;padding-top:56.25%;margin-bottom:30px;">
+
+            <iframe
+                id="videoFrame"
+                style="position:absolute;inset:0;width:100%;height:100%;border:0;"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+        <div class="video-info">
+
+            <h2 id="videoTitle"></h2>
+
+            <div id="videoRole" class="video-role"></div>
+
+            <p id="videoDescription"></p>
+
+            <div class="video-credit">
+
+                <strong>Studio</strong>
+                <span id="videoStudio"></span>
+
+            </div>
+
+            <div class="video-credit">
+
+                <strong>Client</strong>
+                <span id="videoClient"></span>
+
+            </div>
+
+            <div class="video-credit">
+
+                <strong>Art Director</strong>
+                <span id="videoDirector"></span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <div class="lightbox-inner">
+    <div class="lightbox-close" id="lightboxClose">Close ✕</div>
+    <div class="lightbox-nav lightbox-prev" id="lightboxPrev">‹</div>
+    <img id="lightboxImg" src="" alt="">
+    <div class="lightbox-nav lightbox-next" id="lightboxNext">›</div>
+    <div class="lightbox-caption"><span id="lightboxCaption"></span></div>
+  </div>
+</div>
+
+<!-- BACK TO TOP -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+<script src="data.js"></script>
+<script>
+// Wait for data.js to load
+if (typeof projects === 'undefined' || typeof cinematics === 'undefined' || typeof travelVideos === 'undefined') {
+  console.error('data.js not loaded, or missing projects/cinematics/travelVideos!');
+}
+
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* ==================== TABS ==================== */
+document.querySelectorAll('[data-tab]').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const tab = btn.dataset.tab;
+    document.querySelectorAll('.nav-links button').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    const navBtn = document.querySelector('.nav-links button[data-tab="' + tab + '"]');
+    if(navBtn) navBtn.classList.add('active');
+    document.getElementById('panel-' + tab).classList.add('active');
+
+    if(tab === 'work'){
+      projectDetail.classList.remove('active');
+      workGridView.style.display = 'block';
+      activeFilter = 'all';
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      const allBtn = document.querySelector('.filter-btn[data-filter="all"]');
+      if(allBtn) allBtn.classList.add('active');
+      renderProjectGrid();
+    }
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+
+/* ==================== WORK: grid + filter ==================== */
+const projectGrid = document.getElementById('projectGrid');
+const filterBar = document.getElementById('filterBar');
+let activeFilter = 'all';
+
+function renderProjectGrid(){
+  projectGrid.innerHTML = '';
+  projects
+    .filter(p => activeFilter === 'all' || p.category === activeFilter)
+    .forEach((project) => {
+      const pIndex = projects.indexOf(project);
+      const card = document.createElement('div');
+      card.className = 'project-card';
+      const thumbSrc = project.thumbnail || project.images[0].src || 'https://placehold.co/600x600/191816/8C877D?text=Add+Image';
+      const tagLabel = project.category === 'personal' ? 'Personal' : project.category === 'album' ? 'Album Art' : 'Studio';
+      card.innerHTML = `
+        <div class="project-thumb">
+          <img src="${thumbSrc}" alt="${project.title}">
+          <div class="thumb-overlay">
+            <div class="title">${project.title}</div>
+            <div class="meta">${project.meta}</div>
+          </div>
+        </div>
+      `;
+      card.addEventListener('click', () => openProjectDetail(pIndex));
+      projectGrid.appendChild(card);
+    });
+}
+renderProjectGrid();
+
+filterBar.addEventListener('click', (e) => {
+  if(e.target.classList.contains('filter-btn')){
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    e.target.classList.add('active');
+    activeFilter = e.target.dataset.filter;
+    renderProjectGrid();
+  }
+});
+
+/* ==================== WORK: inline project detail (no popup) ==================== */
+const workGridView = document.getElementById('workGridView');
+const projectDetail = document.getElementById('projectDetail');
+const detailTitle = document.getElementById('detailTitle');
+const detailMeta = document.getElementById('detailMeta');
+const detailVideo = document.getElementById('detailVideo');
+const artworkGrid = document.getElementById('artworkGrid');
+const nextProjectBtn = document.getElementById('nextProjectBtn');
+let currentProject = 0;
+
+/* Accepts a plain YouTube/Vimeo link (or an already-formed embed URL) and
+   returns an embeddable iframe src, or null if it doesn't recognize the link. */
+function getEmbedUrl(url){
+  if(!url) return null;
+  if(url.includes('youtube-nocookie.com/embed/') || url.includes('player.vimeo.com/video/')) return url;
+  const yt = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/|youtube\.com\/shorts\/)([\w-]{11})/);
+  if(yt) return `https://www.youtube-nocookie.com/embed/${yt[1]}`;
+  const vm = url.match(/vimeo\.com\/(\d+)(?:\/([a-zA-Z0-9]+))?/);
+  if(vm) return `https://player.vimeo.com/video/${vm[1]}${vm[2] ? '?h=' + vm[2] : ''}`;
+  return null;
+}
+
+/* Indices of projects matching the currently active Work filter, in display order. */
+function getFilteredIndices(){
+  return projects.map((p, i) => i).filter(i => activeFilter === 'all' || projects[i].category === activeFilter);
+}
+
+function openProjectDetail(pIndex){
+  currentProject = pIndex;
+  const project = projects[pIndex];
+  detailTitle.textContent = project.title;
+  detailMeta.textContent = project.meta;
+
+  const embedUrl = getEmbedUrl(project.video);
+  detailVideo.innerHTML = embedUrl
+    ? `<div class="video-frame"><iframe src="${embedUrl}" title="${project.title} video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>`
+    : '';
+
+  const isAlbum = project.category === 'album';
+  artworkGrid.className = isAlbum ? 'artwork-tiles' : 'artwork-stack';
+  artworkGrid.innerHTML = '';
+  project.images.forEach((img, iIndex) => {
+    const thumb = document.createElement('div');
+    thumb.className = 'artwork-thumb';
+    const src = img.src || 'https://placehold.co/600x600/191816/8C877D?text=Add+Image';
+    thumb.innerHTML = isAlbum
+      ? `<div class="frame"><img src="${src}" alt="${img.caption || project.title}"></div>`
+      : `<div class="frame"><img src="${src}" alt="${img.caption || project.title}"></div>${img.caption ? `<div class="cap">${img.caption}</div>` : ''}`;
+    thumb.addEventListener('click', () => { if(!img.placeholder) openLightbox(project.images, iIndex); });
+    artworkGrid.appendChild(thumb);
+  });
+
+  const list = getFilteredIndices();
+  const pos = list.indexOf(pIndex);
+  if(list.length > 1){
+    nextProjectBtn.style.display = 'inline-flex';
+    nextProjectBtn.onclick = () => openProjectDetail(list[(pos + 1) % list.length]);
+  } else {
+    nextProjectBtn.style.display = 'none';
+  }
+
+  workGridView.style.display = 'none';
+  projectDetail.classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+document.getElementById('backToWork').addEventListener('click', () => {
+  projectDetail.classList.remove('active');
+  workGridView.style.display = 'block';
+});
+
+/* ==================== LIGHTBOX ==================== */
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+const lightboxCaption = document.getElementById('lightboxCaption');
+const lightboxPrev = document.getElementById('lightboxPrev');
+const lightboxNext = document.getElementById('lightboxNext');
+let activeImages = [];
+let currentImage = 0;
+
+/* images: an array of { src, caption }. index: which one to open. */
+function openLightbox(images, index){
+  activeImages = images; currentImage = index;
+  renderLightbox();
+  lightbox.classList.add('open');
+}
+function renderLightbox(){
+  const img = activeImages[currentImage];
+  lightboxImg.src = img.src;
+  lightboxImg.alt = img.caption || '';
+  lightboxCaption.textContent = (img.caption || '') + ' — ' + (currentImage + 1) + ' / ' + activeImages.length;
+  const multi = activeImages.length > 1;
+  lightboxPrev.hidden = !multi;
+  lightboxNext.hidden = !multi;
+}
+function closeLightbox(){ lightbox.classList.remove('open'); lightboxImg.src=''; }
+lightboxPrev.addEventListener('click', () => {
+  currentImage = (currentImage - 1 + activeImages.length) % activeImages.length;
+  renderLightbox();
+});
+lightboxNext.addEventListener('click', () => {
+  currentImage = (currentImage + 1) % activeImages.length;
+  renderLightbox();
+});
+document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+lightbox.addEventListener('click', (e) => { if(e.target === lightbox) closeLightbox(); });
+document.addEventListener('keydown', (e) => {
+  if(lightbox.classList.contains('open')){
+    if(e.key === 'Escape') closeLightbox();
+    if(e.key === 'ArrowLeft') lightboxPrev.click();
+    if(e.key === 'ArrowRight') lightboxNext.click();
+  }
+});
+
+/* ==================== CINEMATICS ==================== */
+const cinematicsList = document.getElementById('cinematicsList');
+cinematics.forEach(v => {
+  const card = document.createElement('div');
+  card.className = 'video-card';
+  card.innerHTML = `
+    <div class="video-frame"><iframe src="${v.embed}" title="${v.title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+    <div class="video-text">
+      <div class="v-title">${v.title}</div>
+      <div class="v-desc">${v.desc}</div>
+      <div class="v-credit">${v.credit}</div>
+    </div>
+  `;
+  cinematicsList.appendChild(card);
+});
+
+/* ==================== VIDEOGRAPHY ==================== */
+const videographyGrid = document.getElementById('videographyGrid');
+travelVideos.forEach((id, i) => {
+  const item = document.createElement('div');
+  item.innerHTML = `
+    <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/${id}?rel=0" title="Travel clip ${i+1}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+    <div class="v-title">Travel Clip ${String(i+1).padStart(2,'0')}</div>
+  `;
+  videographyGrid.appendChild(item);
+});
+
+/* ==================== PROJECT VIDEO MODAL (Notable Projects) ==================== */
+const videoLightbox = document.getElementById('videoLightbox');
+const videoFrame = document.getElementById('videoFrame');
+const videoTitle = document.getElementById('videoTitle');
+const videoRole = document.getElementById('videoRole');
+const videoDescription = document.getElementById('videoDescription');
+const videoStudio = document.getElementById('videoStudio');
+const videoClient = document.getElementById('videoClient');
+const videoDirector = document.getElementById('videoDirector');
+
+document.querySelectorAll('.project-video').forEach(el => {
+  el.addEventListener('click', (e) => {
+    e.preventDefault();
+    const key = el.dataset.video;
+    const item = cinematics.find(c => c.id === key);
+    if(!item){ console.warn('No cinematic entry found with id="' + key + '"'); return; }
+
+    videoFrame.src = getEmbedUrl(item.embed);
+    videoTitle.textContent = item.title;
+    videoRole.textContent = item.role || '';
+    videoDescription.textContent = item.desc || '';
+    videoStudio.textContent = item.studio || '—';
+    videoClient.textContent = item.client || '—';
+    videoDirector.textContent = item.director || '—';
+
+    videoLightbox.classList.add('open');
+    document.body.classList.add('no-scroll');
+  });
+});
+
+function closeVideoLightbox(){
+  videoLightbox.classList.remove('open');
+  videoFrame.src = '';
+  document.body.classList.remove('no-scroll');
+}
+document.getElementById('videoClose').addEventListener('click', closeVideoLightbox);
+videoLightbox.addEventListener('click', (e) => { if(e.target === videoLightbox) closeVideoLightbox(); });
+document.addEventListener('keydown', (e) => {
+  if(e.key === 'Escape' && videoLightbox.classList.contains('open')) closeVideoLightbox();
+});
+
+/* ==================== BACK TO TOP ==================== */
+const backToTop = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+  backToTop.classList.toggle('show', window.scrollY > 500);
+});
+backToTop.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+/* ==================== CONTACT FORM ==================== */
+const contactForm = document.getElementById('contactForm');
+if(contactForm){
+  contactForm.addEventListener('submit', function(e){
+    e.preventDefault();
+  });
+}
+</script>
+
+</body>
+</html>
