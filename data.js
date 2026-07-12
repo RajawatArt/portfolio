@@ -225,10 +225,8 @@ const projects = [
     title: "Kenji's Sushi Shop Showdown - Brawl Stars",
     category: "studio",
     meta: "Environment — DoublePlus Studio/ ",
-    thumbnail:`${ASSET_BASE}/images/studio/wizz/Phoenixmancers_thumb.jpg`,
-    videos: [
-      "https://youtu.be/Q8D95ErQbjk",
-    ],
+    thumbnail:`${ASSET_BASE}/images/studio/brawl/brawl_thumb.jpg`,
+    videos: "https://youtu.be/Q8D95ErQbjk",
     images: [
       { src: `${ASSET_BASE}/images/studio/images/studio/brawl/Samurai_Dayl.jpg`, caption: "Restaurant Day" },
       { src: `${ASSET_BASE}/images/studio/images/studio/brawl/Samurai_night.jpg`, caption: "Restaurant night" },
