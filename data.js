@@ -226,7 +226,7 @@ const projects = [
     category: "studio",
     meta: "Environment — DoublePlus Studio/ ",
     thumbnail:`${ASSET_BASE}/images/studio/brawl/brawl_thumb.jpg`,
-    videos: "https://youtu.be/Q8D95ErQbjk",
+   videos: "https://www.youtube.com/embed/Q8D95ErQbjk?si=ki7l54OfUJTek6HP",
     images: [
       { src: `${ASSET_BASE}/images/studio/brawl/Samurai_Dayl.jpg`, caption: "Restaurant Day" },
       { src: `${ASSET_BASE}/images/studio/brawl/Samurai_night.jpg`, caption: "Restaurant night" },
