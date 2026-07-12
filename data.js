@@ -118,7 +118,8 @@ const projects = [
       { src: `${ASSET_BASE}/images/studio/hayday/hdy02.jpg`, caption: "Fence" },
       { src: `${ASSET_BASE}/images/studio/hayday/hdy03.jpg`, caption: "Soil" },
       { src: `${ASSET_BASE}/images/studio/hayday/hdy04.jpg`, caption: "House door Opened" },
-      { src: `${ASSET_BASE}/images/studio/hayday/hdy06.jpg`, caption: "Ground" }
+      { src: `${ASSET_BASE}/images/studio/hayday/hdy06.jpg`, caption: "Ground" },
+      { src: `${ASSET_BASE}/images/studio/hayday/hdy_101_0010_060_bgPaint_v04.mp4`, caption: "Process reel" }
     ]
   },
   {
