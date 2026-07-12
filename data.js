@@ -27,7 +27,7 @@ const projects = [
     title: "Bloomburrow | Magic: The Gathering",
     category: "studio",
     meta: "Background Painting — Brazen Animation Studio",
-    thumbnail: `${ASSET_BASE}/images/thumbnails/mtg_thumb.jpg`,
+    thumbnail: `${ASSET_BASE}/images/studio/mtg/mtg_thumb.jpg`,
     images: [
       { src: `${ASSET_BASE}/images/studio/mtg/fieldGrass_A.jpg`, caption: "Main BG — Field grass" },
       { src: `${ASSET_BASE}/images/studio/mtg/fieldGrass_B.jpg`, caption: "Transition — Field grass" },
