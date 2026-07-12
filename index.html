@@ -74,7 +74,7 @@
   .detail-head .title{ font-family:'Fraunces', serif; font-size:1.7rem; }
   .detail-head .meta{ font-family:'JetBrains Mono', monospace; font-size:.72rem; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-dim); margin-top:.5rem; }
 
-  .artwork-stack{ display:flex; flex-direction:column; gap:2px; background:var(--line); }
+  .artwork-stack{ display:flex; flex-direction:column; gap:2px; background:var(--line); margin:0 2vw; }
   .artwork-thumb{ cursor:zoom-in; background:var(--bg-raised-2); }
   .artwork-thumb.has-video{ cursor:default; }
   .artwork-thumb .frame{ position:relative; background:var(--bg-raised); overflow:hidden; }
@@ -95,6 +95,7 @@
 
   /* Project detail: video slot + footer nav */
   #detailVideo:not(:empty){ margin-bottom:2rem; }
+  .detail-video-list{ display:flex; flex-direction:column; gap:1.5rem; }
   .detail-foot{ display:flex; justify-content:flex-end; margin-top:3rem; padding-top:2rem; border-top:1px solid var(--line); }
   .next-project-btn{ font-family:'JetBrains Mono', monospace; font-size:.72rem; letter-spacing:.12em; text-transform:uppercase; background:transparent; border:1px solid var(--accent); color:var(--accent); padding:.85rem 1.5rem; cursor:pointer; transition:background .3s ease, color .3s ease; }
   .next-project-btn:hover{ background:var(--accent); color:var(--bg); }
@@ -771,9 +772,10 @@ function openProjectDetail(pIndex){
   detailTitle.textContent = project.title;
   detailMeta.textContent = project.meta;
 
-  const embedUrl = getEmbedUrl(project.video);
-  detailVideo.innerHTML = embedUrl
-    ? `<div class="video-frame"><iframe src="${embedUrl}" title="${project.title} video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>`
+  const videoUrls = Array.isArray(project.videos) ? project.videos : (project.video ? [project.video] : []);
+  const embeds = videoUrls.map(getEmbedUrl).filter(Boolean);
+  detailVideo.innerHTML = embeds.length
+    ? `<div class="detail-video-list">${embeds.map(u => `<div class="video-frame"><iframe src="${u}" title="${project.title} video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>`).join('')}</div>`
     : '';
 
   const isAlbum = project.category === 'album';
