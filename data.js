@@ -74,27 +74,6 @@ const projects = [
     ]
   },
   {
-    title: "Syncron x Ohtani",
-    category: "studio",
-    meta: "Environment — Mana Animation",
-    thumbnail: "",
-    videos: [
-      "https://youtu.be/Zu_1_Sd8aCk",
-      "https://youtu.be/jk4wEnN98ko",
-      "https://youtu.be/iXe6N4cvsCY",
-      "https://youtu.be/vjT4sz6THdU"
-    ],
-    images: [
-      { src: `${ASSET_BASE}/images/studio/syncron/MVU_StadiumExt_CleansingIsle.jpg`, caption: "Stadium seats" },
-      { src: `${ASSET_BASE}/images/studio/syncron/OvO_StadiumExt_Hitter.jpg`, caption: "Hitter" },
-      { src: `${ASSET_BASE}/images/studio/syncron/OvO_StadiumInt_HitPitcher.jpg`, caption: "Stadium Exterior" },
-      { src: `${ASSET_BASE}/images/studio/syncron/OAB_StadiumExt_2nd_3rd_Base.jpg`, caption: "Stadium Exterior" },
-      { src: `${ASSET_BASE}/images/studio/syncron/OvO_StadiumExt_Pitcher_3_4.jpg`, caption: "Pitcher" },
-      { src: `${ASSET_BASE}/images/studio/syncron/MANA_SYNCRON_Kitchen.jpg`, caption: "Kitchen" },
-      { src: `${ASSET_BASE}/images/studio/syncron/MVU_StadiumExt_B.jpg`, caption: "Stadium" }
-    ]
-  },
-  {
     title: "Background art- The bazaar official launch tailer",
     category: "studio",
     meta: "Environment — Mana Studio / Background work completed for The Bazaar Launch Trailer under the art direction of Jorik Feskens Background layout supplied by the client",
@@ -233,6 +212,27 @@ const projects = [
       { src: `${ASSET_BASE}/images/studio/brawl/Samurai_backdoor.jpg`, caption: "Backdoor" },
       { src: `${ASSET_BASE}/images/studio/brawl/Samurai_closet.jpg`, caption: "closet" }
      
+    ]
+  },
+   {
+    title: "Syncron x Ohtani",
+    category: "studio",
+    meta: "Environment — Mana Animation",
+    thumbnail: "",
+    videos: [
+      "https://youtu.be/Zu_1_Sd8aCk",
+      "https://youtu.be/jk4wEnN98ko",
+      "https://youtu.be/iXe6N4cvsCY",
+      "https://youtu.be/vjT4sz6THdU"
+    ],
+    images: [
+      { src: `${ASSET_BASE}/images/studio/syncron/MVU_StadiumExt_CleansingIsle.jpg`, caption: "Stadium seats" },
+      { src: `${ASSET_BASE}/images/studio/syncron/OvO_StadiumExt_Hitter.jpg`, caption: "Hitter" },
+      { src: `${ASSET_BASE}/images/studio/syncron/OvO_StadiumInt_HitPitcher.jpg`, caption: "Stadium Exterior" },
+      { src: `${ASSET_BASE}/images/studio/syncron/OAB_StadiumExt_2nd_3rd_Base.jpg`, caption: "Stadium Exterior" },
+      { src: `${ASSET_BASE}/images/studio/syncron/OvO_StadiumExt_Pitcher_3_4.jpg`, caption: "Pitcher" },
+      { src: `${ASSET_BASE}/images/studio/syncron/MANA_SYNCRON_Kitchen.jpg`, caption: "Kitchen" },
+      { src: `${ASSET_BASE}/images/studio/syncron/MVU_StadiumExt_B.jpg`, caption: "Stadium" }
     ]
   },
 {
