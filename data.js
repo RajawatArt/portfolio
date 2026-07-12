@@ -228,11 +228,11 @@ const projects = [
     thumbnail:`${ASSET_BASE}/images/studio/brawl/brawl_thumb.jpg`,
     videos: "https://youtu.be/Q8D95ErQbjk",
     images: [
-      { src: `${ASSET_BASE}/images/studio/images/studio/brawl/Samurai_Dayl.jpg`, caption: "Restaurant Day" },
-      { src: `${ASSET_BASE}/images/studio/images/studio/brawl/Samurai_night.jpg`, caption: "Restaurant night" },
-      { src: `${ASSET_BASE}/images/studio/images/studio/brawl/Samurai_backdoor.jpg`, caption: "Backdoor" },
-      { src: `${ASSET_BASE}/images/studio/images/studio/brawl/Samurai_closet.jpg`, caption: "closet" },
-      { src: `${ASSET_BASE}/images/studio/syncron/MVU_StadiumExt_B.jpg`, caption: "Stadium" }
+      { src: `${ASSET_BASE}/images/studio/brawl/Samurai_Dayl.jpg`, caption: "Restaurant Day" },
+      { src: `${ASSET_BASE}/images/studio/brawl/Samurai_night.jpg`, caption: "Restaurant night" },
+      { src: `${ASSET_BASE}/images/studio/brawl/Samurai_backdoor.jpg`, caption: "Backdoor" },
+      { src: `${ASSET_BASE}/images/studio/brawl/Samurai_closet.jpg`, caption: "closet" }
+     
     ]
   },
 {
