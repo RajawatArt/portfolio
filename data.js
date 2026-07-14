@@ -341,6 +341,20 @@ const projects = [
     ]
   },
   {
+  title: "Riot Domination'",
+  category: "studio",
+  meta: "Background Painting — 2D Studio/ Some background artworks for the RIOT Domination trailer done by the Client 2P Studios",
+  thumbnail: `${ASSET_BASE}/images/studio/domination/dom_lol_thumb.jpg`,
+  video: "https://vimeo.com/865705304/f615f0a7b7?fl=pl&fe=sh",
+  images: [
+    { src: `${ASSET_BASE}/images/studio/domination/dom_lol_bg01.jpg`},
+    { src: `${ASSET_BASE}/iimages/studio/domination/dom_lol_bg02.jpg`},
+    { src: `${ASSET_BASE}/images/studio/domination/dom_lol_bg013.jpg` },
+    { src: `${ASSET_BASE}/images/studio/domination/dom_lol_bg04.jpg` },
+    { src: `${ASSET_BASE}/images/studio/domination/dom_finalview.mp4`, caption: "video cut preview" },
+  ]
+},
+  {
     title: "Lofi Girl- Album Art",
     category: "album",
     meta: "Album Art —, replace with your own tile set",
