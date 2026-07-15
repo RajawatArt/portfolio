@@ -59,9 +59,15 @@ const procreate = createHelper("images/studio/procreate");
 // ==================== PERSONAL WORK ====================
 const ghibli = createHelper("images/personal/ghibli");
 const goy = createHelper("images/personal/ghost_of_yotie");
+const tsushima = createHelper("images/personal/Ghost_of_Tsushima");
 const beautifulday = createHelper("images/personal/Beautiful_day");
 const sekiro = createHelper("images/personal/Sekiro");
 const photostudy = createHelper("images/personal/Photo_Study");
+const cyberpunk = createHelper("images/personal/Cyberpunk");
+const sketch = createHelper("images/personal/Sketch");
+const stilllife = createHelper("images/personal/Still_life");
+const northernlights = createHelper("images/personal/Northern_Lights");
+
 
 // ==================== ALBUM ART ====================
 const lofigirl = createHelper("images/album/lofiGirl");
@@ -546,10 +552,9 @@ const projects = [
     category: "personal",
     meta: " Sekiro Fan art on Procreate app/ The game is absoolutyl amazing and full of wonderful scneneries",
     images: [
-      sekiro("sekiro03.JPG",), sekiro("sekiro02.JPG",  ),
-      sekiro("sekiro04.JPG", ), sekiro("sekiro01.JPG", ),
-      sekiro("sekiro05.JPG", ), sekiro("sekiro06.JPG", ),
-      sekiro("sekiro07.JPG", )
+      sekiro("sekiro03.JPG",), sekiro("sekiro02.JPG",  ), sekiro("sekiro09.JPG", ),
+      sekiro("sekiro04.JPG", ), sekiro("sekiro01.JPG", ), sekiro("sekiro05.JPG", ),
+      sekiro("sekiro06.JPG", ), sekiro("sekiro07.JPG", ), 
     ]
   },  
   
@@ -559,7 +564,7 @@ const projects = [
     meta: " Photo Study on Procreate app/ Some based on the pictures I took during travel",
     images: [
       photostudy("after_dark.JPG",), photostudy("rainy_day.JPG",  ), photostudy("rainy_day02.JPG", ),
-      photostudy("miyajima_hiroshima.JPG", ), photostudy("sekiro01.JPG", ), photostudy("hongkong_shop.JPG", ),
+      photostudy("miyajima_hiroshima.JPG", ), photostudy("Winter_rising.jpg", ), photostudy("hongkong_shop.JPG", ),
       photostudy("normalpeople.JPG", ), photostudy("kyoto_train.JPG", ), photostudy("udaipur_palace.JPG", ),
       photostudy("hongkong.JPG", ), photostudy("tokyo_dome.JPG", ), photostudy("taxi.JPG", ),
       photostudy("tokyo_palace.JPG", ), photostudy("rohtang_pass.JPG", ), photostudy("nubra_valley_leh.JPG", ),
@@ -568,7 +573,66 @@ const projects = [
       photostudy("kyoto_train.JPG", ), photostudy("leh_monastery.JPG", ), photostudy("snow_monkey_path.JPG", ),
       photostudy("oahara_03.JPG", ), photostudy("oahara_01.JPG", ), photostudy("oahara_04.JPG", ),
       photostudy("takeda_castle.JPG", ), photostudy("goa_sunset.JPG", ), photostudy("Cityscape.JPG", ),
-      photostudy("dharamkot_trek.jpg", ), photostudy("musandam_oman.JPG", )
+      photostudy("dharamkot_trek.jpg", ), photostudy("musandam_oman.JPG", ), 
+      photostudy("Itsukushima_Shrine.jpg", )
+    ]
+  }, 
+   {
+    title: "Cyberpunk",
+    category: "personal",
+    meta: "Cyberpunk art on Procreate app/",
+    images: [
+      cyberpunk("Cyberpunk2077_01.jpg",), cyberpunk("Cyberpunk2077_02.jpg",  ), cyberpunk("Cyberpunk2077_03.jpg", ),
+      cyberpunk("NightCity.JPG", ), cyberpunk("District21.JPG", ), cyberpunk("CityLights.JPG", ),
+      cyberpunk("meeting.jpg", ), cyberpunk("RainyDay.JPG", ), cyberpunk("Swagatam.jpg", )
+    ]
+  }, 
+    {
+    title: "Sketches",
+    category: "personal",
+    meta: "Sketches on Procreate app/",
+    images: [
+      sketch("sketch01_tree.JPG",), sketch("sketch02_tree.JPG", ), sketch("sketch03_moss.JPG",),
+      sketch("sketch04_rocks.JPG",), sketch("sketch05_forest.JPG", ), sketch("sketch16_torii.JPG",),
+      sketch("sketch07_bridge.JPG",), sketch("sketch08_clouds.JPG", ), sketch("sketch09_flowers.JPG",),
+      sketch("sketch10_flowers.JPG",), sketch("sketch11_flowers.JPG", ), sketch("sketch12_flowers.JPG",),
+      sketch("sketch13_doors.JPG",), sketch("sketch15_kerala.JPG", ), sketch("sketch17_kerala.JPG",),
+      sketch("sketch18_village.JPG",), sketch("sketch19_beach.JPG", ), sketch("sketch20_beach.JPG",),
+      sketch("sketch21_beach.JPG",), sketch("sketch22_himeji.jpg", ), sketch("sketch14_windmill.JPG",),
+      sketch("sketch23_waterfall.JPG",), sketch("sketch24_torii.JPG", ), sketch("sketch25_tree.JPG",),
+      sketch("sketch26_lake.JPG",), sketch("sketch27_sunset.JPG", ), sketch("sketch28_sunset.JPG",),
+      sketch("sketch29_waterfall.JPG",), sketch("sketch30_tree.JPG", ), sketch("sketch31_forest.JPG",),
+      sketch("sketch32_mountain.JPG",), sketch("sketch35_lights.JPG", ), sketch("sketch33_fuji.JPG",),
+      sketch("sketch34_hut.JPG",), sketch("sketch36_dream.JPG", ), sketch("sketch37_underwater.JPG",),
+      sketch("sketch38_dream.JPG",)
+    ]
+  }, 
+    {
+    title: "Northern Lights",
+    category: "personal",
+    meta: "Northern Lights on Procreate app/",
+    images: [
+      northernlights("Northern_Lights.JPG",), northernlights("Winter_Night_HR.jpg",  ), northernlights("Dancing_Night_web.jpg", ),
+      northernlights("Northern_lights_web.jpg", )
+    ]
+  }, 
+    {
+    title: "Ghost of Tsushima",
+    category: "personal",
+    meta: "Some FanArt sketches of the incredible game/",
+    images: [
+      tsushima("got_01.JPG",), tsushima("got_02.JPG",  ), tsushima("got_03.JPG", ),
+      tsushima("got_04.JPG", ), tsushima("got_05.JPG", ), tsushima("got_06.jpg", ),
+      tsushima("got_10.JPG", ), tsushima("got_7.JPG", ), tsushima("got_08.JPG", )
+    ]
+  }, 
+      {
+    title: "Still Life",
+    category: "personal",
+    meta: "Still life Study on Procreate app/",
+    images: [
+      stilllife("Grapes.JPG",), stilllife("Untitled_still_life.JPG",  ), stilllife("Still_life_sketch.JPG", ),
+      stilllife("Still_life_02.JPG", ), stilllife("Still_life_01.JPG", ), stilllife("Flower.JPG", )
     ]
   }, 
 ];
