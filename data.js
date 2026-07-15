@@ -60,6 +60,8 @@ const procreate = createHelper("images/studio/procreate");
 const ghibli = createHelper("images/personal/ghibli");
 const goy = createHelper("images/personal/ghost_of_yotie");
 const beautifulday = createHelper("images/personal/Beautiful_day");
+const sekiro = createHelper("images/personal/Sekiro");
+const photostudy = createHelper("images/personal/Photo_Study");
 
 // ==================== ALBUM ART ====================
 const lofigirl = createHelper("images/album/lofiGirl");
@@ -489,7 +491,7 @@ const projects = [
     ]
   },
   {
-    title: "Riot - Domniation",
+    title: "Riot Domination",
     category: "studio",
     meta: "Background Painting — 2D Studio/ Some background artworks for the RIOT Domination trailer done by the Client 2P Studios",
     thumbnail:thumb("studio/riot_domination", "dom_lol_thumb.jpg"),
@@ -538,7 +540,37 @@ const projects = [
       lofigirl("Celestial_%20Alignment_Heading_Home.jpg", "Amess - Celestial Alignment-Heading Home"),
       lofigirl("SNUGxNuve_nightfall.JPG", "S N U G x Nuve- Nightfall")
     ]
-  }
+  },
+   {
+    title: "Sekiro FanArt",
+    category: "personal",
+    meta: " Sekiro Fan art on Procreate app/ The game is absoolutyl amazing and full of wonderful scneneries",
+    images: [
+      sekiro("sekiro03.JPG",), sekiro("sekiro02.JPG",  ),
+      sekiro("sekiro04.JPG", ), sekiro("sekiro01.JPG", ),
+      sekiro("sekiro05.JPG", ), sekiro("sekiro06.JPG", ),
+      sekiro("sekiro07.JPG", )
+    ]
+  },  
+  
+   {
+    title: "Photo Study",
+    category: "personal",
+    meta: " Photo Study on Procreate app/ Some based on the pictures I took during travel",
+    images: [
+      photostudy("after_dark.JPG",), photostudy("rainy_day.JPG",  ), photostudy("rainy_day02.JPG", ),
+      photostudy("miyajima_hiroshima.JPG", ), photostudy("sekiro01.JPG", ), photostudy("hongkong_shop.JPG", ),
+      photostudy("normalpeople.JPG", ), photostudy("kyoto_train.JPG", ), photostudy("udaipur_palace.JPG", ),
+      photostudy("hongkong.JPG", ), photostudy("tokyo_dome.JPG", ), photostudy("taxi.JPG", ),
+      photostudy("tokyo_palace.JPG", ), photostudy("rohtang_pass.JPG", ), photostudy("nubra_valley_leh.JPG", ),
+      photostudy("himeji_castle.JPG", ), photostudy("hokora.JPG", ), photostudy("kyoto_02.JPG", ),
+      photostudy("kyoto_03.JPG", ), photostudy("kyoto_04.JPG", ), photostudy("kyoto_teashop.JPG", ),
+      photostudy("kyoto_train.JPG", ), photostudy("leh_monastery.JPG", ), photostudy("snow_monkey_path.JPG", ),
+      photostudy("oahara_03.JPG", ), photostudy("oahara_01.JPG", ), photostudy("oahara_04.JPG", ),
+      photostudy("takeda_castle.JPG", ), photostudy("goa_sunset.JPG", ), photostudy("Cityscape.JPG", ),
+      photostudy("dharamkot_trek.jpg", ), photostudy("musandam_oman.JPG", )
+    ]
+  }, 
 ];
 
 /* ==================== CINEMATICS ==================== */
