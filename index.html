@@ -36,10 +36,10 @@
   .nav-mark{ display:flex; align-items:center; gap:.75rem; }
   .nav-mark img{ height:38px; width:auto; }
   .nav-title{ display:flex; flex-direction:column; line-height:1.25; }
-  .nav-name{ font-family:var(--font-heading); font-weight:700; font-size:1.105rem; color:var(--ink); letter-spacing:0.05em; text-transform:uppercase; }
-  .nav-subtitle{ font-family:var(--font-mono); font-size:.58rem; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); margin-top:.15rem; }
+  .nav-name{ font-family:var(--font-heading); font-weight:400; font-size:1.44rem; color:var(--ink); letter-spacing:0.05em; text-transform:uppercase; }
+  .nav-subtitle{ font-family:var(--font-mono); font-size:.70rem; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); margin-top:.15rem; }
   .nav-links{ display:flex; gap:1.75rem; list-style:none; flex-wrap:wrap; }
-  .nav-links button{ background:none; border:none; cursor:pointer; font-family:var(--font-body); color:var(--ink); font-size:.72rem; letter-spacing:.13em; text-transform:uppercase; padding:0; position:relative; padding-bottom:4px; }
+  .nav-links button{ background:none; border:none; cursor:pointer; font-family:var(--font-body); color:var(--ink); font-size:.94rem; letter-spacing:.13em; text-transform:uppercase; padding:0; position:relative; padding-bottom:4px; }
   .nav-links button::after{ content:''; position:absolute; left:0; bottom:0; width:0; height:1px; background:var(--accent); transition:width .3s ease; }
   .nav-links button:hover::after, .nav-links button.active::after{ width:100%; }
   .nav-links button.active{ color:var(--accent); }
@@ -148,6 +148,7 @@
   .video-grid .v-title{ font-family:var(--font-mono); font-size:.72rem; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-dim); }
 
   /* About */
+  .about-heading{ font-family:var(--font-heading); font-weight:300; font-size:1.1rem; letter-spacing:.04em; text-transform:uppercase; color:var(--ink); margin-bottom:1rem; }
   .about-body p{ max-width:64ch; color:var(--ink-dim); margin-bottom:1.25rem; font-size:1.05rem; }
   .about-body strong{ color:var(--ink); font-weight:500; }
   .resume-btn{ display:inline-flex; align-items:center; gap:.5rem; font-family:var(--font-mono); font-size:.72rem; letter-spacing:.12em; text-transform:uppercase; background:transparent; border:1px solid var(--accent); color:var(--accent); padding:.85rem 1.5rem; cursor:pointer; transition:background .3s ease, color .3s ease; margin-top:.5rem; }
@@ -156,7 +157,7 @@
     .experience-card{ border:1px solid var(--line); background:var(--bg-raised); padding:2rem; margin-top:1rem; }
     .credit-list{ display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:1.5rem 2.5rem; margin-top:1.5rem; }
     .credit-item{ display:flex; justify-content:space-between; align-items:baseline; border-bottom:1px solid rgba(58,58,61,0.4); padding-bottom:0.5rem; }
-    .credit-name{ font-family:var(--font-heading); font-size:0.51rem; text-transform:uppercase; letter-spacing:0.05em; color:var(--ink); cursor:pointer; transition:color 0.2s; }
+    .credit-name{ font-family:var(--font-heading); font-size:0.35rem; text-transform:uppercase; letter-spacing:0.05em; color:var(--ink); cursor:pointer; transition:color 0.2s; }
     .credit-name:hover{ color:var(--accent); }
     .credit-year{ font-family:var(--font-mono); font-size:0.42rem; color:var(--ink-dim); }
     .credit-role{ font-family:var(--font-mono); font-size:0.39rem; color:var(--accent-dim); text-transform:uppercase; margin-top:0.25rem; }
@@ -356,7 +357,7 @@
 
 <nav class="nav">
   <a class="nav-mark" href="#" data-tab="work">
-    <img src="images/logo.jpg" alt="Rajawats Studio">
+    <img src="images/Rajawats_logo.png" alt="Rajawats Studio">
     <div class="nav-title">
       <span class="nav-name">Surendra Rajawat</span>
       <span class="nav-subtitle"> Concept Artist</span>
@@ -365,7 +366,6 @@
   <ul class="nav-links">
     <li><button data-tab="work" class="active">Work</button></li>
     <li><button data-tab="about">About</button></li>
-    <li><button data-tab="cinematics">Cinematics</button></li>
     <li><button data-tab="photography">Photography</button></li>
     <li><button data-tab="store">Store</button></li>
   </ul>
@@ -379,6 +379,8 @@
     <button class="filter-btn" data-filter="studio">Studio Work</button>
     <button class="filter-btn" data-filter="personal">Personal Work</button>
     <button class="filter-btn" data-filter="album">Album Art</button>
+    <button class="filter-btn" data-filter="hog">Hidden Object Games</button>
+    <button class="filter-btn" data-filter="dmp">Matte Painting</button>
   </div>
 
   <div id="workGridView">
@@ -407,16 +409,20 @@
 <!-- ============ ABOUT ============ -->
 <div class="tab-panel" id="panel-about">
   <div class="about-layout"><div class="about-body">
-    <h4><span><b>ABOUT</b></span></h4>
+    <h4 class="about-heading">ABOUT</h4>
     <p> Environment Concept Artist with over 15 years of experience creating environments concepts for video games and animation productions.</p>
     <p>Skilled in Environment Concept Art,Visual Development, hand-Painted textures, Lighting, 2D/3D Props design.</p>
-   <h4><span><b>CONTACT</b></span></h4>
+   <h4 class="about-heading">CONTACT</h4>
     <p style="color:var(--ink-dim); max-width:60ch; margin-bottom:1.5rem;">Please use email ID for work and business inquiry: <b><i>s.rajawat@live.com</i></b></p>
-    <a class="resume-btn" href="mailto:s.rajawat@live.com"> <b>Email me ↗</b></a> <a class="resume-btn" href="images/resume.pdf" download target="_blank" rel="noopener">Download Resume ↓</a>
+    <a class="resume-btn" href="mailto:s.rajawat@live.com"> <b>Email me ↗</b></a> 
+    <a class="resume-btn" href="images/resume.pdf" download target="_blank" rel="noopener">Download Resume ↓</a>
 
     <div class="social-icons">
   <a href="https://www.artstation.com/rajawat" target="_blank" rel="noopener" aria-label="ArtStation">
     <img src="images/thumbnails/artstation.svg" alt="ArtStation">
+  </a>
+        <a href="https://www.linkedin.com/in/surendrarajawat" target="_blank" rel="noopener" aria-label="LinkedIn">
+    <img src="images/thumbnails/linkedin.svg" alt="LinkedIn">
   </a>
   <a href="https://www.instagram.com/suren.rajawat" target="_blank" rel="noopener" aria-label="Instagram">
     <img src="images/thumbnails/instagram.svg" alt="Instagram">
@@ -424,21 +430,14 @@
   <a href="https://twitter.com/SpsRajawat" target="_blank" rel="noopener" aria-label="x.com">
     <img src="images/thumbnails/x.svg" alt="X.com">
   </a>
-  <a href="https://www.linkedin.com/in/surendrarajawat" target="_blank" rel="noopener" aria-label="LinkedIn">
-    <img src="images/thumbnails/linkedin.svg" alt="LinkedIn">
-  </a>
 </div>
   </div><div class="about-photo"><img src="images/profile.jpg" alt="Surendra Rajawat"></div></div>
 
 
     <div class="section-label" style="margin-top:3rem;">Software Proficiency</div>
   <div class="skills-grid">
-    <div class="skill-badge">
-    <img src="images/software/PS.svg" alt="Adobe Photoshop">
-    <span>Adobe Photoshop</span>
-</div>
-
-<div class="skill-badge"><img src="images/software/Procreate.svg" alt="Procreate"><span>Procreate</span></div>
+<div class="skill-badge"><img src="images/software/PS.svg" alt="Adobe Photoshop"> <span>Adobe Photoshop</span></div>
+<div class="skill-badge"><img src="images/software/procreate.svg" alt="Procreate"><span>Procreate</span></div>
 <div class="skill-badge"><img src="images/software/3dsmax.svg" alt="3ds Max"><span>3ds Max</span></div>
 <div class="skill-badge"><img src="images/software/Blender.svg" alt="Blender"><span>Blender 3D</span></div>
 <div class="skill-badge"><img src="images/software/Corona.svg" alt="Corona Renderer"><span>Corona Renderer</span></div>
@@ -453,6 +452,15 @@
       <div class="exp-item exp-item-sm exp-item-dim"><b>Location</b><span>Dubai, United Arab Emirates</span></div>
       <div class="exp-item exp-item-sm exp-item-dim"><b>Duration</b><span>Oct 2019 — Present</span></div>
     </div>
+      <div class="exp-item">
+      <b>Description</b>
+      <p>
+        Concept Artist at Rajawats Studio LLC, an outsourcing studio based in Dubai, UAE. 
+        Contributed to a diverse range of creative projects, including environment concept art for mostly mobile games and 
+        background art for game trailers, visual development for indie games as well as environment design for TV commercials, album covers, and book covers.   
+                </p>
+    </div>
+    
     <div class="exp-item" style="margin-bottom:1rem;">
       <b>Clients &amp; Studios</b>
       <div class="exp-tags">
@@ -484,14 +492,14 @@
       </div>
     </div>
         <div class="exp-item">
-      <b>Notable Projects</b>
+      <b>CREDITS/ PROJECTS </b>
       <div class="credit-list">
         <div class="credit-group">
           <div class="credit-item">
-            <span class="credit-name project-link" data-project="Wagamama 'Bowl to Soul'">Wagamama</span>
-            <span class="credit-year">2023</span>
+            <span class="credit-name project-link" data-project="Wagamama 'Bowl to Soul'">Wagamama: Bowl to Soul</span>
+            <span class="credit-year">2020</span>
           </div>
-          <div class="credit-role">Concept Artist</div>
+          <div class="credit-role">Background Concept Artist</div>
         </div>
         <div class="credit-group">
           <div class="credit-item">
@@ -523,7 +531,98 @@
           </div>
           <div class="credit-role">Environment Concept Artist</div>
         </div>
-
+                <div class="credit-group">
+          <div class="credit-item">
+            <span class="credit-name project-link" data-project="Bloomburrow | Magic: The Gathering">MTG: Bloomburrow</span>
+            <span class="credit-year">2025</span>
+          </div>
+          <div class="credit-role">Environment Artist</div>
+        </div>
+        <div class="credit-group">
+          <div class="credit-item">
+            <span class="credit-name project-link" data-project="Background art- The bazaar official launch tailer">Bazaar</span>
+            <span class="credit-year">2025</span>
+          </div>
+          <div class="credit-role">Environment Artist</div>
+        </div>
+                <div class="credit-group">
+          <div class="credit-item">
+            <span class="credit-name project-link" data-project="Trainline: I Came By Train (Craig David)">Trainline: I came by Train</span>
+            <span class="credit-year">2024</span>
+          </div>
+          <div class="credit-role">Environment Artist</div>
+        </div>
+                <div class="credit-group">
+          <div class="credit-item">
+            <span class="credit-name project-link" data-project="A Day in a Hay Day- Trailer">Hay Day</span>
+            <span class="credit-year">2025</span>
+          </div>
+          <div class="credit-role">Environment Artist</div>
+        </div>
+                <div class="credit-group">
+          <div class="credit-item">
+            <span class="credit-name project-link" data-project="Marvel Midnight Suns: Salem Sisters">Marvel: Midnight Sons</span>
+            <span class="credit-year">2024</span>
+          </div>
+          <div class="credit-role">Background Artist</div>
+        </div>
+                <div class="credit-group">
+          <div class="credit-item">
+            <span class="credit-name project-link" data-project=" Return to Valoran City — Star Guardian">League of Legends: Star Guardian</span>
+            <span class="credit-year">2024</span>
+          </div>
+          <div class="credit-role">Environment Artist</div>
+        </div>
+                <div class="credit-group">
+          <div class="credit-item">
+            <span class="credit-name project-link" data-project="Background art- FACEBOOK - Good Ideas Deserve to be Found">Facebook: Good Ideas</span>
+            <span class="credit-year">2023</span>
+          </div>
+          <div class="credit-role">Environment Concept Artist</div>
+        </div>
+                <div class="credit-group">
+          <div class="credit-item">
+            <span class="credit-name project-link" data-project="Background art-'Start Counting' Chobani Probiotic">Chobani</span>
+            <span class="credit-year">2023</span>
+          </div>
+          <div class="credit-role">Environment Concept Artist</div>
+        </div>
+                <div class="credit-group">
+          <div class="credit-item">
+            <span class="credit-name project-link" data-project="Kizazi Moto: Mukudzei">Disney: Kizazi Moto</span>
+            <span class="credit-year">2025</span>
+          </div>
+          <div class="credit-role">Environment Concept Artist</div>
+        </div>
+                <div class="credit-group">
+          <div class="credit-item">
+            <span class="credit-name project-link" data-project="FreeFire : Lucha Libre AAA">Freefire: Lucha Libre AAA</span>
+            <span class="credit-year">2024</span>
+          </div>
+          <div class="credit-role">Environment Concept Artist</div>
+        </div>
+                <div class="credit-group">
+          <div class="credit-item">
+            <span class="credit-name project-link" data-project="Syncron x Ohtani">Syncron</span>
+            <span class="credit-year">2025</span>
+          </div>
+          <div class="credit-role">Background Artist</div>
+        </div>
+                <div class="credit-group">
+          <div class="credit-item">
+            <span class="credit-name project-link" data-project="Kenji's Sushi Shop Showdown - Brawl Stars">Brawl Stars: Kenji</span>
+            <span class="credit-year">2025</span>
+          </div>
+          <div class="credit-role">Environment Concept Artist</div>
+        </div>
+         <div class="credit-group">
+          <div class="credit-item">
+            <span class="credit-name project-link" data-project="Apex Legends- Stories from the Outlands – The Endorsement">League of Legends: Endorsement</span>
+            <span class="credit-year">2024</span>
+          </div>
+          <div class="credit-role">Environment Artist</div>
+        </div>
+        
       </div>
     </div>
   </div>
@@ -545,15 +644,43 @@
 
     <div class="exp-item">
       <b>Notable Projects</b>
-      <div class="exp-tags">
-        <span class="tag-pill">Clash of Beasts</span>
-        <span class="tag-pill">NCIS: Hidden Crimess</span>
-        <span class="tag-pill">Tom Clancy's Elite Squad</span>
-        <span class="tag-pill">CSI: Hidden Crimes</span>
-      </div>
+       </div>
+         <div class="credit-group">
+          <div class="credit-item">
+            <span class="credit-name project-link" data-project=""> Clash of Beasts</span>
+            <span class="credit-year">2019</span>
+          </div>
+          <div class="credit-role"> Environment Cocnept Artist</div>
+        </div>
+         <div class="credit-group">
+          <div class="credit-item">
+            <span class="credit-name project-link" data-project="NCIS: Hidden Crimes"> NCIS: Hidden Crimess</span>
+            <span class="credit-year">2018</span>
+          </div>
+          <div class="credit-role"> 2D Artist</div>
+        </div>
+             <div class="credit-group">
+          <div class="credit-item">
+            <span class="credit-name project-link" data-project="Tom Clancy's Elite Squad: Location concepts"> Tom Clancy's Elite Squad</span>
+            <span class="credit-year">2018</span>
+          </div>
+          <div class="credit-role"> Cocnept Artist</div>
+        </div>
+             <div class="credit-group">
+          <div class="credit-item">
+            <span class="credit-name project-link" data-project="CSI: Hidden Crimes">CSI: Hidden Crimes</span>
+            <span class="credit-year">2016</span>
+          </div>
+          <div class="credit-role"> 2D Artist</div>
+        </div>
+                 <div class="credit-group">
+          <div class="credit-item">
+            <span class="credit-name project-link" data-project="">Growtopia</span>
+            <span class="credit-year">2018</span>
+          </div>
+          <div class="credit-role"> 2D Artist</div>
+        </div>
     </div>
-  </div>
-
   <div class="experience-card">
     <div class="exp-row">
       <div class="exp-item"><b>Company</b><span>Playdom: Disney Interactive Media Group</span></div>
@@ -577,8 +704,7 @@
       </div>
     </div>
   </div>
-
-    <div class="experience-card">
+  <div class="experience-card">
     <div class="exp-row">
       <div class="exp-item"><b>Company</b><span>Gameshastra Solution Pvt Ltd</span></div>
       <div class="exp-item"><b>Designation</b><span>Background Artist</span></div>
@@ -637,7 +763,9 @@
 
 <!-- ============ CINEMATICS ============ -->
 <div class="tab-panel" id="panel-cinematics">
+  
   <div class="section-label">Selected Cinematics</div>
+  
   <div class="video-list" id="cinematicsList"></div>
 </div>
 
@@ -829,8 +957,9 @@ function renderProjectGrid(){
       const pIndex = projects.indexOf(project);
       const card = document.createElement('div');
       card.className = 'project-card';
-      const thumbSrc = project.thumbnail || project.images[0].src || 'https://placehold.co/600x600/191816/8C877D?text=Add+Image';
-      const tagLabel = project.category === 'personal' ? 'Personal' : project.category === 'album' ? 'Album Art' : 'Studio';
+      const thumbSrc = project.thumbnail || project.images?.[0]?.src ||'https://placehold.co/600x600/191816/8C877D?text=Add+Image';
+      const tagLabel = project.category === 'personal' ? 'Personal' : project.category === 'album' ? 'Album Art' : 
+                       project.category === 'hog' ? 'Hidden Object Games' : project.category === 'dmp' ? 'Matte Painting' :'Studio';
       card.innerHTML = `
         <div class="project-thumb">
           <img src="${thumbSrc}" alt="${project.title}">
