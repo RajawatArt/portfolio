@@ -55,6 +55,7 @@ const valorant_vibes = createHelper("images/studio/valorant_vibes");
 const wagamama = createHelper("images/studio/wagamama");
 const phoenix = createHelper("images/studio/wizz");
 const procreate = createHelper("images/studio/procreate");
+const owlient = createHelper("images/studio/Elite_Squad");
 
 // ==================== PERSONAL WORK ====================
 const ghibli = createHelper("images/personal/ghibli");
@@ -74,6 +75,14 @@ const lofigirl = createHelper("images/album/lofiGirl");
 const raimu = createHelper("images/album/Raimu");
 
 
+// ==================== HOG ART ====================
+const ncis = createHelper("images/studio/Hidden_Objects_Games/NCIS");
+const csi = createHelper("images/studio/Hidden_Objects_Games/CSI");
+const playdom = createHelper("images/studio/Hidden_Objects_Games");
+
+
+// ==================== DMP ART ====================
+const dmp = createHelper("images/personal/DMP");
 
 // ====================PROJECTS ====================
 
@@ -93,19 +102,7 @@ const projects = [
       mtg("fieldBattleReverse.jpg", "Field battle, reverse angle")
     ]
   },
-
-  {
-    title: "Ghost of Yotie — Fan Art",
-    category: "personal",
-    meta: "Fan Art — GOY Artbook, Sony PlayStation Germany",
-    thumbnail: thumb("personal/ghost_of_yotie", "goy_ride.jpg"),
-    images: [
-      goy("goy_ride.jpg", "Ride"),  goy("goy_duel.jpg", "Duel"), goy("goy_mountain.jpg", "Rest"),
-      goy("goy_onsen.jpg", "Onsen"), goy("goy_bookpage.jpg", "book"), goy("goy_book.jpg", "book")
-    ]
-  },
-
-  {
+    {
     title: "Palia: Cinematic Trailer",
     category: "studio",
     meta: "Environment — Axis Studios / Singularity 6",
@@ -136,37 +133,8 @@ const projects = [
       bazaar("02.jpg", "City Entrance"),  bazaar("Mak_lab.jpg", "Mak Lab"),  bazaar("Bazaar_colorScript.jpg", "Colour Script")
     ]
   },
-
-  {
-    title: "A Day in a Hay Day- Trailer",
-    category: "studio",
-    meta: "Environment — Sun Creature Studio / Background work for the game trailer. Background layout supplied by the client",
-    thumbnail: thumb("studio/hayday", "hyd_thumb.jpg"),
-    video: "https://youtu.be/otQ6kAZJXcY",
-    images: [
-      hayday("hdy01.jpg", "Windmill"), hayday("hdy04.jpg", "House front"),
-      hayday("hdy02.jpg", "Fence"),  hayday("hdy03.jpg", "Soil"),
-      hayday("hdy04.jpg", "House door Opened"), hayday("hdy06.jpg", "Ground"),
-      hayday("hdy_101_0010_060_bgPaint_v04.mp4", "Background paint process")
-    ]
-  },
-
-  {
-    title: "Marvel Midnight Suns: Salem Sisters",
-    category: "studio",
-    meta: "Background Paint — Sun Creature / 2K Games",
-    thumbnail: thumb("studio/midnight", "midnight_thumb.jpg"),
-    images: [
-      midnight("salem_sisters.jpg", "Salem Sisters"), midnight("mms_01.jpg", "City Street"),  midnight("mms_02.jpg", "door"),
-      midnight("mms_03.jpg"), midnight("mms_04.jpg"), midnight("mms_05.jpg"), midnight("mms_06.jpg"),
-      midnight("mms_07.jpg"), midnight("mms_08.jpg"), midnight("mms_09.jpg"),
-      midnight("mms_10.jpg"), midnight("mms_11.jpg"), midnight("mms_12.jpg"),
-      midnight("mms_13.jpg"), midnight("mms_14.jpg"), midnight("mms_15.jpg"),
-      midnight("mms_16.jpg"), midnight("mms_17.jpg"), midnight("mms_18.jpg"),
-      midnight("Process_preview.gif", "Process Preview")
-    ]
-  },
-
+  
+  
   {
     title: "Return to Valoran City — Star Guardian",
     category: "studio",
@@ -193,65 +161,6 @@ const projects = [
     ]
   },
 
-  {
-    title: "League of Legends: Phoenixmancers",
-    category: "studio",
-    meta: "Background Painting — WIZZ @ Quad Group / Riot Games",
-    thumbnail: thumb("studio/wizz", "Phoenixmancers_thumb.jpg"),
-    video: "https://www.youtube-nocookie.com/embed/ES5ah68iyxA?rel=0",
-    images: [
-      phoenix("Phoenixmancers_BG01.jpg", "Phoenixmancers"), phoenix("Phoenixmancers_BG02.jpg", "Phoenixmancers"),
-      phoenix("Phoenixmancers_BG03.jpg", "Phoenixmancers"), phoenix("Phoenixmancers_BG04.jpg", "Phoenixmancers"),
-      phoenix("Phoenixmancers_BG05.jpg", "Phoenixmancers"), phoenix("Phoenixmancers_BG06.jpg", "Phoenixmancers"),
-      phoenix("Phoenixmancers_Process_gif.gif", "Process")
-    ]
-  },
-
-   {
-    title: "League of Legends: Sentinels of Light|Absolution",
-    category: "studio",
-    meta: "Background Painting — Axis Studio / Riot Games",
-    thumbnail: thumb("studio/absolution", "lol_abs_thumb.jpg"),
-    video: "https://www.youtube.com/embed/a8h1BTe45AU?si=W6CcTTbVECZN2wyU",
-    images: [
-      absolution("lol_BGPaint02_pillar.jpg", ""),
-      absolution("lol_BGPaint01_pillar.jpg", ""),
-      absolution("lol_BGPaint04_steps.jpg", ""),
-      absolution("lol_BGPaint05_throne.jpg", ""),
-      absolution("LOL_Absolution_compilation.mp4", "Backgrounds in Final trailer compilation"),
-      absolution("LOL_Absolution_cut01.mp4", "background"),
-      absolution("LOL_Absolution_cut02.mov", "background02"),
-      absolution("LOL_Absolution_cut03.mov", "background03"),
-      absolution("LOL_Absolution_cut04.mov", "background04"),
-      absolution("SoL2_02_030_anim.gif", "Process")
-    ]
-  },
-  {
-    title: "Background art- FACEBOOK - Good Ideas Deserve to be Found",
-    category: "studio",
-    meta: "Environment — Riff Raff Films / Some background that I did for Facebook commercial video directed by David Wilson",
-    thumbnail: thumb("studio/RiffRaff", "Japanese_Market_thumb.jpg"),
-    video: "https://player.vimeo.com/video/519042929?h=33147b0dfd&dnt=1",
-    images: [
-      facebook("Japanese_Market_street.jpg", "Japanese Market"),
-      facebook("Japanese_Market_side.png", "Market Side shot panoramic"),
-      facebook("facebook_cut.mp4", "preview"),
-      facebook("Japanese_Market_manhole.png", "manhole")
-    ]
-  },
-
-  {
-    title: "Background art- \"Start Counting\" Chobani Probiotic",
-    category: "studio",
-    meta: "Environment — The Line Animation Studio / Director by Bjørn-Erik Aschim / Art Direction by Pedro Antoine / concept art by: Chiara Benedetti",
-    thumbnail: thumb("studio/Chobani", "chobani_kitchen_02.jpg"),
-    video: "https://www.youtube-nocookie.com/embed/xWMJU-WFTxQ?rel=0",
-    images: [
-      chobani("chobani_kitchen_02.jpg", "Kitchen Modern"),
-      chobani("chobani_kitchen_01.jpg", "Kitchen old")
-    ]
-  },
-  
   {
     title: "Kizazi Moto: Mukudzei",
     category: "studio",
@@ -285,8 +194,264 @@ const projects = [
       kizaziMoto("Muku_SkyDMP01.jpg", "Sky DMP")
     ]
   },
+  
+  {
+    title: "League of Legends: Phoenixmancers",
+    category: "studio",
+    meta: "Background Painting — WIZZ @ Quad Group / Riot Games",
+    thumbnail: thumb("studio/wizz", "Phoenixmancers_thumb.jpg"),
+    video: "https://www.youtube-nocookie.com/embed/ES5ah68iyxA?rel=0",
+    images: [
+      phoenix("Phoenixmancers_BG01.jpg", "Phoenixmancers"), phoenix("Phoenixmancers_BG02.jpg", "Phoenixmancers"),
+      phoenix("Phoenixmancers_BG03.jpg", "Phoenixmancers"), phoenix("Phoenixmancers_BG04.jpg", "Phoenixmancers"),
+      phoenix("Phoenixmancers_BG05.jpg", "Phoenixmancers"), phoenix("Phoenixmancers_BG06.jpg", "Phoenixmancers"),
+      phoenix("Phoenixmancers_Process_gif.gif", "Process")
+    ]
+  },
+  
 
   {
+    title: "A Day in a Hay Day- Trailer",
+    category: "studio",
+    meta: "Environment — Sun Creature Studio / Background work for the game trailer. Background layout supplied by the client",
+    thumbnail: thumb("studio/hayday", "hyd_thumb.jpg"),
+    video: "https://youtu.be/otQ6kAZJXcY",
+    images: [
+      hayday("hdy01.jpg", "Windmill"), hayday("hdy04.jpg", "House front"),
+      hayday("hdy02.jpg", "Fence"),  hayday("hdy03.jpg", "Soil"),
+      hayday("hdy04.jpg", "House door Opened"), hayday("hdy06.jpg", "Ground"),
+      hayday("hdy_101_0010_060_bgPaint_v04.mp4", "Background paint process")
+    ]
+  },
+  
+     {
+    title: "League of Legends: Sentinels of Light|Absolution",
+    category: "studio",
+    meta: "Background Painting — Axis Studio / Riot Games",
+    thumbnail: thumb("studio/absolution", "lol_abs_thumb.jpg"),
+    video: "https://www.youtube.com/embed/a8h1BTe45AU?si=W6CcTTbVECZN2wyU",
+    images: [
+      absolution("lol_BGPaint02_pillar.jpg", ""),
+      absolution("lol_BGPaint01_pillar.jpg", ""),
+      absolution("lol_BGPaint04_steps.jpg", ""),
+      absolution("lol_BGPaint05_throne.jpg", ""),
+      absolution("LOL_Absolution_compilation.mp4", "Backgrounds in Final trailer compilation"),
+      absolution("LOL_Absolution_cut01.mp4", "background"),
+      absolution("LOL_Absolution_cut02.mov", "background02"),
+      absolution("LOL_Absolution_cut03.mov", "background03"),
+      absolution("LOL_Absolution_cut04.mov", "background04"),
+      absolution("SoL2_02_030_anim.gif", "Process")
+    ]
+  },
+  {
+    title: "Background art- FACEBOOK - Good Ideas Deserve to be Found",
+    category: "studio",
+    meta: "Environment — Riff Raff Films / Some background that I did for Facebook commercial video directed by David Wilson",
+    thumbnail: thumb("studio/RiffRaff", "Japanese_Market_thumb.jpg"),
+    video: "https://player.vimeo.com/video/519042929?h=33147b0dfd&dnt=1",
+    images: [
+      facebook("Japanese_Market_street.jpg", "Japanese Market"),
+      facebook("Japanese_Market_side.png", "Market Side shot panoramic"),
+      facebook("facebook_cut.mp4", "preview"),
+      facebook("Japanese_Market_manhole.png", "manhole")
+    ]
+  },
+
+  {
+    title: "Background art-'Start Counting' Chobani Probiotic",
+    category: "studio",
+    meta: "Environment — The Line Animation Studio / Director by Bjørn-Erik Aschim / Art Direction by Pedro Antoine / concept art by: Chiara Benedetti",
+    thumbnail: thumb("studio/Chobani", "chobani_kitchen_02.jpg"),
+    video: "https://www.youtube-nocookie.com/embed/xWMJU-WFTxQ?rel=0",
+    images: [
+      chobani("chobani_kitchen_02.jpg", "Kitchen Modern"),
+      chobani("chobani_kitchen_01.jpg", "Kitchen old")
+    ]
+  },
+    {
+    title: "Ghibli Background Study",
+    category: "personal",
+    meta: "Background painting — Procreate app",
+    layout: "tiles",
+    thumbnail: thumb("personal/ghibli", "ghilbi_spritedAway.jpg"),
+    images: [
+      ghibli("ghilbi_spritedAway.jpg", "Spirited Away"),
+      ghibli("ghibli_MyNeighbourTotoro01.jpg", "My Neighbour totoro"),
+      ghibli("ghibli_wmwt.jpg", "When Marnie was there"),
+      ghibli("ghibli_wmwt02.jpg", "When Marnie was there- Close Up"),
+      ghibli("ghibli_fromUpOnPoppyHill01.jpg", "From up on Poppy Hills"),
+      ghibli("ghibli_fromUpOnPoppyHill02.jpg", "From up on Poppy Hills"),
+      ghibli("ghibli_mononokeHime.jpg", "Princess Mononoke"),
+      ghibli("ghibli_Arrietty.jpg", "Arreitty"),
+      ghibli("ghibli_porco_rosso01.jpg", "Porco Rosso"),
+      ghibli("ghibli_porco_rosso02.jpg", "Porco Rosso"),
+      ghibli("ghibli_whisper-of-the-heart.jpg", "Whisper of the Heart")
+      
+    ]
+  },
+{
+    title: "Trees",
+    category: "personal",
+    meta: " done in Procreate app",
+    images: [
+      sketch("sketch01_tree.JPG",)
+      ]
+    },
+  {
+    title: "Moss",
+    category: "personal",
+    meta: " done in Procreate app",
+    images: [
+       sketch("sketch03_moss.JPG",), sketch("sketch04_rocks.JPG",)
+      ]
+    },
+    {
+    title: "Ghost of Yotie — Fan Art",
+    category: "personal",
+    meta: "Fan Art — GOY Artbook, Sony PlayStation Germany",
+    thumbnail: thumb("personal/ghost_of_yotie", "goy_ride.jpg"),
+    images: [
+      goy("goy_ride.jpg", "Ride"),  goy("goy_duel.jpg", "Duel"), goy("goy_mountain.jpg", "Rest"),
+      goy("goy_onsen.jpg", "Onsen"), goy("goy_bookpage.jpg", "book"), goy("goy_book.jpg", "book")
+    ]
+  },
+  {
+    title: "The Unknown",
+    category: "personal",
+    images: [
+      sketch("The_Unkown.jpg", "The Unknown")
+    ]
+  },
+
+    {
+    title: "Wagamama 'Bowl to Soul'",
+    category: "studio",
+    meta: "Background concepts — Some Restaurant and kitchen shots done forthe wagamama 'Bowl to Soul' film by Passion Animation Studio Animation Studios /Agency-Mullenlowe/ Director- Mads Broni",
+    thumbnail: thumb("studio/wagamama", "wagamama_thumb.jpg"),
+    video: "https://player.vimeo.com/video/394921700?h=cfb9e93a27&dnt=1",
+    images: [
+      wagamama("W_london_shot1.jpg", "London"),
+      wagamama("Wagamama_london_pitch.jpg", "London"),
+      wagamama("Wagamama_rest_pitch.jpg", "Restaurant Int"),
+      wagamama("Wagamama_SC25.jpg", "Bowl"),
+      wagamama("Wagamama_SC17.jpg", "Restaurant Int"),
+      wagamama("Wagamama_Scene_16.jpg", "Restaurant"),
+      wagamama("Wagamama_Scene_14.jpg", "Bus Stop"),
+      wagamama("wagamama_Sc21.jpg", "Kitchen"),
+      wagamama("Wagamama_Sc_08.jpg", "Kitchen"),
+      wagamama("Wagamama_Sc27.jpg", "Restaurant Int"),
+      wagamama("Wagamama_SC38.jpg", "Restaurant Int"),
+      wagamama("Wagamama_SC19.jpg", "Restaurant Int"),
+      wagamama("Wagamama_SC18.jpg", "Restaurant Int")
+    ]
+  },
+  
+    {
+    title: "The Unknown",
+    category: "personal",
+    images: [
+      sketch("meeting_place01.jpg",), sketch("meeting_place02.jpg",)
+    ]
+  },
+  
+  {
+    title: "Raimu: Album Art",
+    category: "album",
+    meta: "Album art for lofi music albums by Raimu",
+     thumbnail: thumb("album/Raimu", "Raimuforest.jpg"),
+    images: [
+      raimu("Raimuforest.jpg", "Forest" ), raimu("Raimu_torii.jpg", "Raimu Torii" ),
+    ]
+  },
+  
+    {
+    title: "Syncron x Ohtani",
+    category: "studio",
+    meta: "Environment — Mana Animation",
+    thumbnail: thumb("studio/syncron", "MVU_StadiumExt_CleansingIsle.jpg"),
+    videos: [
+      "https://youtu.be/Zu_1_Sd8aCk", "https://youtu.be/jk4wEnN98ko",
+      "https://youtu.be/iXe6N4cvsCY", "https://youtu.be/vjT4sz6THdU"
+    ],
+    images: [
+      syncron("MVU_StadiumExt_CleansingIsle.jpg", "Stadium seats"), syncron("OvO_StadiumExt_Hitter.jpg", "Hitter"),
+      syncron("OvO_StadiumInt_HitPitcher.jpg", "Stadium Exterior"), syncron("OAB_StadiumExt_2nd_3rd_Base.jpg", "Stadium Exterior"),
+      syncron("OvO_StadiumExt_Pitcher_3_4.jpg", "Pitcher"), syncron("MANA_SYNCRON_Kitchen.jpg", "Kitchen"),
+      syncron("MVU_StadiumExt_B.jpg", "Stadium")
+    ]
+  },
+  {
+    title: "Backyard",
+    category: "personal",
+    meta: " Backyard shot practice from /'My Neighbour Totoro' / done in Procreate app",
+    images: [
+      ghibli("ghibli_mnt_backyard01.jpg","Day time",),ghibli("ghibli_mnt_backyard02.jpg","Night time"),
+      ghibli("ghibli_mnt_backyard03.jpg","Raining"),ghibli("ghibli_mnt_backyard_anim.gif","preview")
+      ]
+    },  
+  {
+    title: "Beautiful Day",
+    category: "personal",
+    meta: "Background painting — Procreate app",
+    images: [
+      beautifulday("beautiful_day.jpg", "Beautiful Day" ),
+      beautifulday("beautiful_day_ref.jpg", "Reference" ),
+    ]
+  },
+  
+  {
+    title: "Forest",
+    category: "personal",
+    meta: "Sketches — Procreate app",
+    images: [
+      sketch("sketch40_forest.jpg",),sketch("sketch05_forest.JPG",),
+      sketch("sketch39_forest.jpg",),sketch("sketch41_forest.jpg",)
+    ]
+  },
+   {
+    title: "Morning Light",
+    category: "studio",
+    meta: "Background painting — Procreate app",
+    thumbnail: thumb("studio/procreate","IMG_3500.JPG" ),
+    images: [
+      procreate("IMG_3500.JPG", "Beautiful Day" ),
+    ]
+  },
+   {
+    title: "Flowers",
+    category: "personal",
+    meta: "Macro photos Studies/'Flowers'/ — Procreate app",
+    thumbnail: thumb("personal/Sketch","sketch43_flowers.jpg" ),
+    images: [
+      sketch("sketch43_flowers.jpg",), sketch("sketch09_flowers.JPG",),
+      sketch("sketch11_flowers.JPG",), sketch("sketch12_flowers.JPG",)
+    ]
+  },  
+{
+    title: "Platform",
+    category: "personal",
+    images: [
+      sketch("platform.JPG",), sketch("platform_train_anim.mp4","Done in After Effects"),sketch("platform_train01.jpg",),
+      sketch("platform_train02.JPG",)
+    ]
+  },
+
+    {
+    title: "Marvel Midnight Suns: Salem Sisters",
+    category: "studio",
+    meta: "Background Paint — Sun Creature / 2K Games",
+    thumbnail: thumb("studio/midnight", "midnight_thumb.jpg"),
+    images: [
+      midnight("salem_sisters.jpg", "Salem Sisters"), midnight("mms_01.jpg", "City Street"),  midnight("mms_02.jpg", "door"),
+      midnight("mms_03.jpg"), midnight("mms_04.jpg"), midnight("mms_05.jpg"), midnight("mms_06.jpg"),
+      midnight("mms_07.jpg"), midnight("mms_08.jpg"), midnight("mms_09.jpg"),
+      midnight("mms_10.jpg"), midnight("mms_11.jpg"), midnight("mms_12.jpg"),
+      midnight("mms_13.jpg"), midnight("mms_14.jpg"), midnight("mms_15.jpg"),
+      midnight("mms_16.jpg"), midnight("mms_17.jpg"), midnight("mms_18.jpg"),
+      midnight("Process_preview.gif", "Process Preview")
+    ]
+  },
+    {
     title: "Apex Legends- Stories from the Outlands – The Endorsement",
     category: "studio",
     meta: "Environment — Passion Animation/ Had a pleasure working on the new cinematic trailer made by Passion Pictures- UK under the direction of Mads Broni",
@@ -346,23 +511,6 @@ const projects = [
   },
 
   {
-    title: "Syncron x Ohtani",
-    category: "studio",
-    meta: "Environment — Mana Animation",
-    thumbnail: thumb("studio/syncron", "MVU_StadiumExt_CleansingIsle.jpg"),
-    videos: [
-      "https://youtu.be/Zu_1_Sd8aCk", "https://youtu.be/jk4wEnN98ko",
-      "https://youtu.be/iXe6N4cvsCY", "https://youtu.be/vjT4sz6THdU"
-    ],
-    images: [
-      syncron("MVU_StadiumExt_CleansingIsle.jpg", "Stadium seats"), syncron("OvO_StadiumExt_Hitter.jpg", "Hitter"),
-      syncron("OvO_StadiumInt_HitPitcher.jpg", "Stadium Exterior"), syncron("OAB_StadiumExt_2nd_3rd_Base.jpg", "Stadium Exterior"),
-      syncron("OvO_StadiumExt_Pitcher_3_4.jpg", "Pitcher"), syncron("MANA_SYNCRON_Kitchen.jpg", "Kitchen"),
-      syncron("MVU_StadiumExt_B.jpg", "Stadium")
-    ]
-  },
-
-  {
     title: "FreeFire : Lucha Libre AAA",
     category: "studio",
     meta: "Background Painting — Passion Pictures / Garena Free Fire",
@@ -403,67 +551,6 @@ const projects = [
   },
 
   {
-    title: "Wagamama 'Bowl to Soul'",
-    category: "studio",
-    meta: "Background concepts — Some Restaurant and kitchen shots done forthe wagamama 'Bowl to Soul' film by Passion Animation Studio Animation Studios /Agency-Mullenlowe/ Director- Mads Broni",
-    thumbnail: thumb("studio/wagamama", "wagamama_thumb.jpg"),
-    video: "https://player.vimeo.com/video/394921700?h=cfb9e93a27&dnt=1",
-    images: [
-      wagamama("W_london_shot1.jpg", "London"),
-      wagamama("Wagamama_london_pitch.jpg", "London"),
-      wagamama("Wagamama_rest_pitch.jpg", "Restaurant Int"),
-      wagamama("Wagamama_SC25.jpg", "Bowl"),
-      wagamama("Wagamama_SC17.jpg", "Restaurant Int"),
-      wagamama("Wagamama_Scene_16.jpg", "Restaurant"),
-      wagamama("Wagamama_Scene_14.jpg", "Bus Stop"),
-      wagamama("wagamama_Sc21.jpg", "Kitchen"),
-      wagamama("Wagamama_Sc_08.jpg", "Kitchen"),
-      wagamama("Wagamama_Sc27.jpg", "Restaurant Int"),
-      wagamama("Wagamama_SC38.jpg", "Restaurant Int"),
-      wagamama("Wagamama_SC19.jpg", "Restaurant Int"),
-      wagamama("Wagamama_SC18.jpg", "Restaurant Int")
-    ]
-  },
-
-  {
-    title: "Ghibli Background Study",
-    category: "personal",
-    meta: "Background painting — Procreate app",
-    layout: "tiles",
-    thumbnail: thumb("personal/ghibli", "ghilbi_spritedAway.jpg"),
-    images: [
-      ghibli("ghilbi_spritedAway.jpg", "Spirited Away"),
-      ghibli("ghibli_MyNeighbourTotoro01.jpg", "My Neighbour totoro"),
-      ghibli("ghibli_wmwt.jpg", "When Marnie was there"),
-      ghibli("ghibli_wmwt02.jpg", "When Marnie was there- Close Up"),
-      ghibli("ghibli_fromUpOnPoppyHill01.jpg", "From up on Poppy Hills"),
-      ghibli("ghibli_fromUpOnPoppyHill02.jpg", "From up on Poppy Hills"),
-      ghibli("ghibli_mononokeHime.jpg", "Princess Mononoke"),
-      ghibli("ghibli_Arrietty.jpg", "Arreitty"),
-      ghibli("ghibli_porco_rosso01.jpg", "Porco Rosso"),
-      ghibli("ghibli_porco_rosso02.jpg", "Porco Rosso"),
-      ghibli("ghibli_whisper-of-the-heart.jpg", "Whisper of the Heart")
-    ]
-  },
-  {
-    title: "Beautiful Day",
-    category: "personal",
-    meta: "Background painting — Procreate app",
-    images: [
-      beautifulday("beautiful_day.jpg", "Beautiful Day" ),
-      beautifulday("beautiful_day_ref.jpg", "Reference" ),
-    ]
-  },
-  {
-    title: "Morning Light",
-    category: "studio",
-    meta: "Background painting — Procreate app",
-    thumbnail: thumb("studio/procreate","IMG_3500.JPG" ),
-    images: [
-      procreate("IMG_3500.JPG", "Beautiful Day" ),
-    ]
-  },
-  {
     title: "Riot Domination",
     category: "studio",
     meta: "Background Painting — 2D Studio/ Some background artworks for the RIOT Domination trailer done by the Client 2P Studios",
@@ -472,6 +559,25 @@ const projects = [
     images: [
       riot_domination("dom_lol_bg01.jpg"), riot_domination("dom_lol_bg02.jpg"),
       riot_domination("dom_lol_bg03.jpg"), riot_domination("dom_finalview.mp4", "video cut preview")
+    ]
+  },
+    {
+    title: "Tom Clancy's Elite Squad: Location concepts",
+    category: "studio",
+    meta: "Environment Concepts for TC: Elite Squad mobile game ",
+    thumbnail: thumb("studio/Elite_Squad", "EliteSquad_thumb.jpg"),
+    images: [
+      owlient("EliteSquad_division_madison_square_concept.jpg", "The Division: Madison Sqaure concept"), 
+      owlient("EliteSquad_division_manhattan_bridge.jpg", "The Division: Manhattan Bridge concept"),
+      owlient("EliteSquad_ghostrecon_barvechos_nidia_flores_mansion.jpg", "Ghost Recon: Barvechos Nidia Flores Mansion concept"),
+      owlient("EliteSquad_ghostrecon_bolivian_village.jpg", "Ghost Recon: Bolivian Village concept"),
+      owlient("EliteSquad_ghostrecon_jungle_druglab.jpg", "Ghost Recon: Bolivian Village concept"),
+      owlient("EliteSquad_rainbowsixsiege_market.jpg", "Ghost Recon: Bolivian Village concept"),
+      owlient("EliteSquad_rainbowsixsiege_navy_pier.jpg", "Rainbow Six Siege: Navy Pier concept"),
+      owlient("EliteSquad_rainbowsixsiege_operation_redcrow.jpg", "Rainbow Six Siege:Operation Redcrow concept"),
+      owlient("EliteSquad_splintercell_airport.jpg", "Splintercell: Airport concept"),
+      owlient("EliteSquad_splintercell_prison_ext.jpg", "Splintercell: Prison Ext concept"),
+      owlient("EliteSquad_splintercell_prison_rooftop.jpg", "Splintercell: Prison Rooftop concept")
     ]
   },
   {
@@ -563,8 +669,8 @@ const projects = [
     meta: " Sekiro Fan art on Procreate app/ The game is absoolutyl amazing and full of wonderful scneneries",
     images: [
       sekiro("sekiro03.JPG",), sekiro("sekiro02.JPG",  ), sekiro("sekiro09.JPG", ),
-      sekiro("sekiro04.JPG", ), sekiro("sekiro01.JPG", ), sekiro("sekiro05.JPG", ),
-      sekiro("sekiro06.JPG", ), sekiro("sekiro07.JPG", ), 
+      sekiro("sekiro10_adaptation.jpg",), sekiro("sekiro04.JPG", ), sekiro("sekiro01.JPG", ), sekiro("sekiro05.JPG", ),
+      sekiro("sekiro06.JPG", ), sekiro("sekiro07.JPG", )
     ]
   },  
   
@@ -604,8 +710,7 @@ const projects = [
     meta: "Sketches on Procreate app/",
     layout: "tiles",
     images: [
-      sketch("sketch01_tree.JPG",), sketch("sketch02_tree.JPG", ), sketch("sketch03_moss.JPG",),
-      sketch("sketch04_rocks.JPG",), sketch("sketch05_forest.JPG", ), sketch("sketch16_torii.JPG",),
+      sketch("sketch02_tree.JPG", ), sketch("sketch05_forest.JPG", ), sketch("sketch16_torii.JPG",),
       sketch("sketch07_bridge.JPG",), sketch("sketch08_clouds.JPG", ), sketch("sketch09_flowers.JPG",),
       sketch("sketch10_flowers.JPG",), sketch("sketch11_flowers.JPG", ), sketch("sketch12_flowers.JPG",),
       sketch("sketch13_doors.JPG",), sketch("sketch15_kerala.JPG", ), sketch("sketch17_kerala.JPG",),
@@ -619,6 +724,7 @@ const projects = [
       sketch("sketch38_dream.JPG",)
     ]
   }, 
+  
     {
     title: "Northern Lights",
     category: "personal",
@@ -628,6 +734,7 @@ const projects = [
       northernlights("Northern_lights_web.jpg", )
     ]
   }, 
+  
     {
     title: "Ghost of Tsushima",
     category: "personal",
@@ -638,16 +745,17 @@ const projects = [
       tsushima("got_10.JPG", ), tsushima("got_7.JPG", ), tsushima("got_08.JPG", )
     ]
   }, 
-   {
-    title: "Raimu: Album Art",
-    category: "album",
-    meta: "Album art for lofi music albums by Raimu",
-     thumbnail: thumb("album/Raimu", "Raimuforest.jpg"),
+  
+  {
+    title: "Goa Sketches ",
+    category: "personal",
+    meta: "Some Sketches of Goa during the trip on Procreate app",
     images: [
-      raimu("Raimuforest.jpg", "Forest" ), raimu("Raimu_torii.jpg", "Raimu Torii" ),
+      sketch("Goa/Goa_farmland.jpg",), sketch("Goa/Goa02.jpg",  ), sketch("Goa/Goa01.jpg", ),
+      sketch("Goa/Goa03.jpg", ), sketch("Goa/Goa05.jpg", ), sketch("Goa/Goa06.jpg", )
     ]
-  },
-      {
+  }, 
+  {
     title: "Still Life",
     category: "personal",
     meta: "Still life Study on Procreate app/",
@@ -656,6 +764,102 @@ const projects = [
       stilllife("Still_life_02.JPG", ), stilllife("Still_life_01.JPG", ), stilllife("Flower.JPG", )
     ]
   }, 
+  
+//==================DMP==========================
+ {
+    title: "Sunrise- Fort",
+    category: "dmp",
+    meta: "Peronal DMP practice",
+    images: [
+      dmp("dmp_fort_sunrise.jpg",)
+    ]
+  }, 
+{
+    title: "Passage",
+    category: "dmp",
+    meta: "Peronal DMP practice from the 'Vietnam stock images bundle' of Ninh Binh location",
+    images: [
+      dmp("dmp_passage_ninhBinh01.jpg",), dmp("dmp_passage_ninhBinh02.jpg",)
+    ]
+  }, 
+{
+    title: "Discover- Oman",
+    category: "dmp",
+    meta: "Peronal DMP practice from the 'Oman Stock image bundle'",
+    images: [
+      dmp("dmp_discover_oman.jpg",)
+    ]
+  }, 
+ {
+    title: "Passage- Skull Island",
+    category: "dmp",
+    meta: "Peronal DMP practice from the 'Vietnam stock images bundle' of Skull Island location",
+    images: [
+      dmp("dmp_passage_viet_skull_island.jpg",)
+    ]
+  },
+   {
+    title: "Abandoned- Ma Wan",
+    category: "dmp",
+    meta: "Peronal DMP practice from the 'Hong Kong- Ma wan stock images bundle'",
+    images: [
+      dmp("dmp_abandoned_hk.jpg",)
+    ]
+  },
+  //==================DMP==========================
+  {
+    title: "NCIS: Hidden Crimes",
+    category: "hog",
+    meta: "Hidden Objects background and assets for NCIS: Hiiden Crimes",
+    thumbnail: thumb("studio/Hidden_Objects_Games/NCIS", "NCIS_AbbysLab.jpg"),
+    images: [
+      ncis("NCIS_AbbysLab.jpg","Abby's Lab"), ncis("NCIS_AirShow.jpg","airshow"),
+      ncis("NCIS_BaggageClaim.jpg","baggage Claim"), ncis("NCIS_DroneLab.jpg","Drone Lab"),
+      ncis("NCIS_GunShop.jpg","Gun Shop"), ncis("NCIS_HotelRoom.jpg","Hotel Room"),
+      ncis("NCIS_Loft.jpg","Loft"), ncis("NCIS_Lounge.jpg","Lounge"),
+      ncis("NCIS_Mine.jpg","Mines"), ncis("NCIS_parentsHouse.jpg","Parents House"),
+      ncis("NCIS_PizzaShop.jpg","Pizza Shop"), ncis("NCIS_postoffice.jpg","Post Office"),
+      ncis("NCIS_SafeHouse.jpg","Safe House"), ncis("NCIS_Studio_apt.jpg","Studio Apartment"),
+      ncis("NCIS_map_assets01.jpg","Map Assets"), ncis("NCIS_map_assets02.jpg","Map Assets"),
+      
+      ncis("NCIS_map_assets03.jpg","Map Assets")   
+    ]
+  },
+   {
+    title: "CSI: Hidden Crimes",
+    category: "hog",
+    meta: "Hidden Objects background and assets for CSI: Hiiden Crimes",
+     thumbnail: thumb("studio/Hidden_Objects_Games/CSI", "CSI_backalley.jpg"),
+    images: [
+      csi("CSI_backalley.jpg","Abby's Lab"), csi("CSI_halloween.jpg","airshow"),
+      csi("CSI_banqouet_hall.jpg","baggage Claim"), csi("CSI_living_room.jpg","Drone Lab"),
+      csi("CSI_Clea_gateway.jpg","Gun Shop"), csi("CSI_pateintroom.jpg","Hotel Room"),
+      csi("CSI_neongraveyard.jpg","Loft"), csi("CSI_PoolTable_master.jpg","Lounge"),
+      csi("CSI_restuarant.jpg","Mines"), csi("CSI_swimmin_pool.jpg","Parents House"),
+      csi("CSI_underground_unit.jpg","Pizza Shop"), csi("CSI_warehouse.jpg","Post Office"),
+      csi("NCIS_map_assets03.jpg","Map Assets")   
+    ]
+  },
+   {
+    title: "Playdom: Hidden Objects Games",
+    category: "hog",
+    meta: "Hidden Objects background and assets for multiple hidden Objects game by Playdom",
+     thumbnail: thumb("studio/Hidden_Objects_Games", "Aftermath.jpg"),
+    images: [
+      playdom("Aftermath.jpg","Abby's Lab"), playdom("Baoan_Temple.jpg","airshow"),
+      playdom("Airship_Door.jpg","baggage Claim"), playdom("Bo_Kaap.jpg","Drone Lab"),
+      playdom("Airship_Fight.jpg","Gun Shop"), playdom("Canvas_Tent_Interior.jpg","Hotel Room"),
+      playdom("Aquarium.jpg","Loft"), playdom("GreenSchool.jpg","Lounge"),
+      playdom("ControlRoom.jpg","Mines"), playdom("HiddenRoom_Tokyo.jpg","Parents House"),
+      playdom("DayoftheDead.jpg","Pizza Shop"), playdom("IceHotel.jpg","Post Office"),
+      playdom("Kremlin_Interior.jpg","Pizza Shop"), playdom("Malta_Alleyway.jpg","Post Office"),
+      playdom("Mexican_Market.jpg","Pizza Shop"), playdom("Opera_House.jpg","Post Office"),
+      playdom("Panda_Exhibit.jpg","Pizza Shop"), playdom("Shanhai_pass.jpg","Post Office"),
+      playdom("Skier.jpg","Pizza Shop"), playdom("The_Trolls_Tongue.jpg","Post Office"),
+      playdom("GreekBakery.jpg","Map Assets")   
+    ]
+  },
+  
 ];
 
 /* ==================== CINEMATICS ==================== */
