@@ -21,7 +21,7 @@
  * }
  */
 
-const ASSET_BASE = "https://pub-55a74feacf2244e2a0a923ce15f2237d.r2.dev";
+const ASSET_BASE = "https://cdn.rajawats.com";
 
 // ==================== HELPER FACTORY ====================
 const createHelper = (basePath) => (f, c) => ({ 
